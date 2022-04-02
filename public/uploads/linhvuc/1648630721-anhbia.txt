@@ -1,0 +1,1056 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: Mar 21, 2022 at 06:28 AM
+-- Server version: 5.7.36
+-- PHP Version: 8.0.13
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `demo`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `baiviet`
+--
+
+DROP TABLE IF EXISTS `baiviet`;
+CREATE TABLE IF NOT EXISTS `baiviet` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tenbai` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tags` text COLLATE utf8mb4_unicode_ci,
+  `view` int(11) DEFAULT NULL,
+  `mota` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `noidung` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nguoidang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `create_at` date NOT NULL,
+  `phanloai_id` int(11) NOT NULL,
+  `binhluan_id` int(11) NOT NULL,
+  `trangthai` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `baiviet`
+--
+
+INSERT INTO `baiviet` (`id`, `tenbai`, `tags`, `view`, `mota`, `avatar`, `noidung`, `nguoidang`, `create_at`, `phanloai_id`, `binhluan_id`, `trangthai`) VALUES
+(7, 'Từ thấu hiểu ‘nỗi đau’của ngành giáo dục đến sự ra đời của hệ sinh thái giáo dục số Viettel', 'tin tức,công nghệ,tin tức công nghệ,giáo dục,hệ sinh thái giáo dục,giáo dục số', 1, '<p><em><strong>Để khắc phục nhược điểm của hệ thống gi&aacute;o dục truyền thống, hệ sinh th&aacute;i gi&aacute;o dục số của Viettel đ&atilde; ra đời kh&ocirc;ng chỉ hỗ trợ việc dạy v&agrave; học m&agrave; c&ograve;n tối ưu c&ocirc;ng t&aacute;c quản l&yacute; v&agrave; tạo ra cầu nối giữa ng&agrave;nh gi&aacute;o dục v&agrave; x&atilde; hội.</strong></em></p>', '1646618743-baiviet.jpg', '<p style=\"text-align:justify\">&quot;Động lực th&ocirc;i th&uacute;c Viettel tạo dựng hệ sinh th&aacute;i gi&aacute;o dục số xuất ph&aacute;t từ &quot;nỗi đau&quot; của ng&agrave;nh gặp phải trong tiến tr&igrave;nh chuyển đổi số&quot;, b&agrave; Phạm Thị Ngọc Lan, Gi&aacute;m đốc Trung t&acirc;m Giải ph&aacute;p Gi&aacute;o dục số, Tổng C&ocirc;ng ty Giải ph&aacute;p doanh nghiệp Viettel (Viettel Solutions) chia sẻ khi nh&igrave;n lại h&agrave;nh tr&igrave;nh 5 năm theo đuổi dự &aacute;n. Với người phụ nữ n&agrave;y v&agrave; c&aacute;c đồng nghiệp, đ&acirc;y l&agrave; một h&agrave;nh tr&igrave;nh đầy cảm x&uacute;c.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"2212docx-1640162551942\" src=\"https://solutions.viettel.vn/storage/giao-duc/2212docx-1640162551942.png\" style=\"height:117px; width:500px\" /></p>\r\n\r\n<p style=\"text-align:justify\"><em>Hai năm qua, khi đại dịch Covid-19 ập đến, trường học phải đ&oacute;ng cửa, việc học online, ứng dụng c&ocirc;ng nghệ th&ocirc;ng tin (CNTT) trong quản l&yacute; nh&agrave; trường, dạy v&agrave; học ng&agrave;y c&agrave;ng chiếm vị thế quan trọng. Đ&acirc;y cũng l&agrave; l&uacute;c nhiều giải ph&aacute;p c&ocirc;ng nghệ của Viettel được lan tỏa mạnh mẽ. Qu&aacute; tr&igrave;nh đ&oacute; bắt đầu như thế n&agrave;o?</em></p>\r\n\r\n<p style=\"text-align:justify\">Trong thời điểm dịch bệnh b&ugrave;ng ph&aacute;t v&agrave; diễn biến phức tạp, nh&oacute;m c&aacute;c giải ph&aacute;p hỗ trợ đ&agrave;o tạo như K12Online v&agrave; ViettelStudy đ&atilde; ph&aacute;t huy tối đa hiệu quả, hỗ trợ thầy tr&ograve; &quot;tạm dừng đến trường, kh&ocirc;ng ngừng việc học&quot;.</p>\r\n\r\n<p style=\"text-align:justify\">Tuy nhi&ecirc;n, c&aacute;c hệ thống tr&ecirc;n kh&ocirc;ng ph&aacute;t triển một c&aacute;ch ri&ecirc;ng lẻ m&agrave; được quy hoạch để trở th&agrave;nh một mảnh gh&eacute;p trong hệ sinh th&aacute;i gi&aacute;o dục số của Tập đo&agrave;n Viettel.</p>\r\n\r\n<p style=\"text-align:justify\">Từ năm 2017, bắt đầu với việc x&acirc;y dựng cơ sở dữ liệu li&ecirc;n th&ocirc;ng, đồng bộ trong ng&agrave;nh gi&aacute;o dục, ch&uacute;ng t&ocirc;i đ&atilde; đặt nền m&oacute;ng cho sự h&igrave;nh th&agrave;nh của một hệ sinh th&aacute;i to&agrave;n diện, phục vụ mọi nhu cầu của tất cả c&aacute;c đối tượng thuộc ng&agrave;nh gi&aacute;o dục, từ cấp quản l&yacute; cho tới gi&aacute;o vi&ecirc;n, phụ huynh v&agrave; học sinh.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"2212docx-1640162552069\" src=\"https://solutions.viettel.vn/storage/giao-duc/2212docx-1640162552069.png\" /></p>\r\n\r\n<p style=\"text-align:justify\"><em>Động lực n&agrave;o th&ocirc;i th&uacute;c Viettel phải tạo dựng một hệ sinh th&aacute;i chuyển đối số cho nền gi&aacute;o dục?</em></p>\r\n\r\n<p style=\"text-align:justify\">Thực tế cho thấy gi&aacute;o dục l&agrave; một trong những lĩnh vực ứng dụng c&ocirc;ng nghệ th&ocirc;ng tin từ rất sớm. Tuy nhi&ecirc;n, cụm từ &quot;ứng dụng c&ocirc;ng nghệ th&ocirc;ng tin&quot; từng khiến rất nhiều gi&aacute;o vi&ecirc;n sợ h&atilde;i. Bởi c&ocirc;ng nghệ th&ocirc;ng tin đ&aacute;ng lẽ phải gi&uacute;p ng&agrave;nh gi&aacute;o dục v&agrave; c&aacute;c gi&aacute;o vi&ecirc;n đỡ vất vả th&igrave; lại khiến c&aacute;c thầy, c&ocirc; gi&aacute;o &quot;việc chồng việc&quot;.</p>\r\n\r\n<p style=\"text-align:justify\">V&iacute; dụ trong nhiều năm qua, c&aacute;c thầy c&ocirc; phải ghi th&ocirc;ng tin học bạ bằng cả hai h&igrave;nh thức: vừa phải viết học bạ giấy, vừa phải nhập kết quả của học sinh v&agrave;o học bạ điện tử để phục vụ c&ocirc;ng t&aacute;c quản l&yacute; b&aacute;o c&aacute;o.</p>\r\n\r\n<p style=\"text-align:justify\">B&ecirc;n cạnh đ&oacute;, phần mềm phục vụ gi&aacute;o dục tr&ecirc;n thị trường được ph&aacute;t triển bởi nhiều nh&agrave; cung cấp kh&aacute;c nhau. V&igrave; được ph&aacute;t triển một c&aacute;ch ri&ecirc;ng lẻ n&ecirc;n c&aacute;c hệ thống n&agrave;y thiếu t&iacute;nh li&ecirc;n th&ocirc;ng dữ liệu v&agrave; ph&acirc;n quyền chặt chẽ.</p>\r\n\r\n<p style=\"text-align:justify\">Điển h&igrave;nh l&agrave; một trường tiểu học ở H&agrave; Nội sử dụng đến 16 phần mềm. Chưa kể, mỗi khi c&oacute; chỉ đạo thay to&agrave;n bộ hệ thống phần mềm mới v&agrave; c&aacute;c gi&aacute;o vi&ecirc;n phải nhập lại dữ liệu từ đầu. Bởi vậy, c&oacute; nơi, thầy c&ocirc; cấp quản l&yacute; c&oacute; cả một trang A4 chỉ để ghi t&ecirc;n c&aacute;c phần mềm k&egrave;m t&agrave;i khoản, mật khẩu truy cập.</p>\r\n\r\n<p style=\"text-align:justify\">Cũng từ thực trạng n&agrave;y, ng&agrave;nh gi&aacute;o dục phải đối mặt với nguy cơ thiếu an to&agrave;n th&ocirc;ng tin khi th&ocirc;ng tin người d&ugrave;ng bị ph&acirc;n bổ d&agrave;n trải tr&ecirc;n những hệ thống nhỏ lẻ, tiềm ẩn rủi ro nhiều rủi ro lớn cho thầy tr&ograve; v&agrave; c&aacute;c cấp quản l&yacute; gi&aacute;o dục.</p>\r\n\r\n<p style=\"text-align:justify\">Mặc d&ugrave; Bộ GD&amp;ĐT đ&atilde; ban h&agrave;nh nhiều th&ocirc;ng tư hướng dẫn c&aacute;c cơ sở gi&aacute;o dục ứng dụng CNTT v&agrave;o c&aacute;c hoạt động quản l&yacute;, dạy, học, đ&aacute;nh gi&aacute;, nhưng t&igrave;nh trạng &quot;điều h&agrave;nh bằng điện tử nhưng thanh kiểm tra bằng thủ c&ocirc;ng&quot; vẫn phổ biến.</p>\r\n\r\n<p style=\"text-align:justify\">Bởi vậy, động lực th&ocirc;i th&uacute;c Viettel tạo dựng hệ sinh th&aacute;i gi&aacute;o dục số ch&iacute;nh l&agrave; do Viettel đ&atilde; &quot;Thấu hiểu những &quot;nỗi đau&quot; của ng&agrave;nh gi&aacute;o dục v&agrave; sự vất vả của c&aacute;c thầy c&ocirc; trong qu&aacute; tr&igrave;nh đồng h&agrave;nh c&ugrave;ng ng&agrave;nh Gi&aacute;o dục chuyển đổi số.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"Từ thấu hiểu nỗi đau của ngành giáo dục đến sự ra đời của hệ sinh thái giáo dục số Viettel - 3\" src=\"https://icdn.dantri.com.vn/thumb_w/770/2021/12/22/2212docx-1640162552292.png\" title=\"Từ thấu hiểu nỗi đau của ngành giáo dục đến sự ra đời của hệ sinh thái giáo dục số Viettel - 3\" /></p>\r\n\r\n<p style=\"text-align:justify\"><em>L&agrave; người đứng đầu dự &aacute;n v&agrave; cũng từng c&oacute; thời điểm mở trung t&acirc;m dạy th&ecirc;m với mong muốn t&igrave;m thầy c&ocirc; giỏi cho con m&igrave;nh v&agrave; con của bạn b&egrave;. Những kinh nghiệm trong thời gian n&agrave;y đ&atilde; gi&uacute;p chị nhận ra những nhược điểm g&igrave; của hệ thống gi&aacute;o dục truyền thống? Điều đ&oacute; đ&atilde; gi&uacute;p &iacute;ch cho bản th&acirc;n chị như thế n&agrave;o khi điều h&agrave;nh dự &aacute;n n&agrave;y?</em></p>\r\n\r\n<p style=\"text-align:justify\">Theo t&ocirc;i, nhược điểm của hệ thống gi&aacute;o dục truyền thống l&agrave; tập trung v&agrave;o người dạy. Gi&aacute;o vi&ecirc;n chủ yếu chỉ đủ thời gian để giảng dạy kiến thức l&yacute; thuyết theo lối truyền thụ một chiều do thời lượng tiết học tr&ecirc;n lớp kh&ocirc;ng đủ cho c&aacute;c hoạt động tương t&aacute;c, m&agrave; chỉ dừng ở mức &quot;nhớ&quot; v&agrave; &quot;hiểu&quot; b&agrave;i.</p>\r\n\r\n<p style=\"text-align:justify\">C&aacute;ch thức tổ chức lớp học, triển khai chương tr&igrave;nh gi&aacute;o dục, đ&aacute;nh gi&aacute; học sinh... kh&ocirc;ng c&aacute; thể h&oacute;a do sĩ số lớp học đ&ocirc;ng. Từ đ&oacute;, hạn chế việc ph&aacute;t triển c&aacute;c kỹ năng vốn c&oacute; của học sinh.</p>\r\n\r\n<p style=\"text-align:justify\">Ngo&agrave;i ra, hệ thống gi&aacute;o dục cũ c&ograve;n gặp nhiều bất cập trong việc x&acirc;y dựng về quản l&yacute; dữ liệu. Mục ti&ecirc;u ng&agrave;nh gi&aacute;o dục hướng đến l&agrave; đưa ra quyết định, hoạch định chiến lược phải dựa tr&ecirc;n cơ sở dữ liệu, v&igrave; thế chỉ c&oacute; tiến h&agrave;nh chuyển đối số th&igrave; mới thực hiện được mục ti&ecirc;u n&agrave;y. Tuy nhi&ecirc;n, do t&igrave;nh trạng một nơi sử dụng nhiều phần mềm, nhiều hệ thống chạy song song nhau, kh&ocirc;ng c&oacute; sự đồng nhất, li&ecirc;n th&ocirc;ng dẫn đến qu&aacute; tr&igrave;nh xuất dữ liệu đầu ra c&oacute; sự sai lệch.</p>\r\n\r\n<p style=\"text-align:justify\">Nhằm khắc phục nhược điểm của hệ thống gi&aacute;o dục truyền thống, hệ sinh th&aacute;i gi&aacute;o dục số của ch&uacute;ng t&ocirc;i đ&atilde; được thiết kế hướng tới d&ugrave;ng giải ph&aacute;p c&ocirc;ng nghệ để hỗ trợ c&aacute;c thầy c&ocirc; v&agrave; ng&agrave;nh gi&aacute;o dục, x&acirc;y dựng một x&atilde; hội học tập mở v&agrave; đảm bảo 5 mục ti&ecirc;u ch&iacute;nh: Tối ưu c&ocirc;ng t&aacute;c quản l&yacute; điều h&agrave;nh cho ng&agrave;nh gi&aacute;o dục; N&acirc;ng cao chất lượng dạy v&agrave; học, giảm tải cho gi&aacute;o vi&ecirc;n; Tạo th&oacute;i quen học tập chủ động cho học sinh; Gi&uacute;p phụ huynh đồng h&agrave;nh c&ugrave;ng qu&aacute; tr&igrave;nh học tập của con; Trở th&agrave;nh cầu nối th&acirc;n thiện giữa ng&agrave;nh gi&aacute;o dục v&agrave; x&atilde; hội.</p>\r\n\r\n<p style=\"text-align:justify\"><em>Viettel đ&atilde; chọn lĩnh vực n&agrave;o trong gi&aacute;o dục l&agrave; điểm bắt đầu của việc x&acirc;y dựng Hệ sinh th&aacute;i? Tại sao Viettel lại chọn lĩnh vực đ&oacute; l&agrave; điểm bắt đầu? Điểm bắt đầu đ&oacute; được b&agrave; v&agrave; c&aacute;c đồng nghiệp t&igrave;m ra như thế n&agrave;o?</em></p>\r\n\r\n<p style=\"text-align:justify\">Nhận thấy những bất cập v&agrave; nguy cơ li&ecirc;n quan đến t&iacute;nh đồng bộ của dữ liệu, việc đầu ti&ecirc;n Viettel bắt tay v&agrave;o đ&oacute; l&agrave; x&acirc;y dựng cơ sở dữ liệu ng&agrave;nh cho cấp quản l&yacute; điều h&agrave;nh của ng&agrave;nh gi&aacute;o dục - yếu tố quan trọng nhất của hệ sinh th&aacute;i.</p>\r\n\r\n<p style=\"text-align:justify\">Thứ hai, trong qu&aacute; tr&igrave;nh x&acirc;y dựng hệ sinh th&aacute;i chuyển đổi số gi&aacute;o dục, Viettel đ&atilde; b&aacute;m s&aacute;t những quy định, cấu tr&uacute;c của Khung kiến tr&uacute;c ch&iacute;nh phủ điện tử 2.0 do Bộ TT&amp;TT ban h&agrave;nh.</p>\r\n\r\n<p style=\"text-align:justify\">Với việc ban h&agrave;nh Th&ocirc;ng tư số 26/2019/TT-BGDĐT, Bộ GD&amp;ĐT đ&atilde; ti&ecirc;n phong x&acirc;y dựng hệ thống cơ sở dữ liệu ng&agrave;nh, trong đ&oacute; quy định mỗi học sinh v&agrave; gi&aacute;o vi&ecirc;n c&oacute; một m&atilde; số định danh ri&ecirc;ng biệt v&agrave; duy nhất, phục vụ c&ocirc;ng t&aacute;c quản l&yacute;, b&aacute;o c&aacute;o, kết nối dữ liệu...</p>\r\n\r\n<p style=\"text-align:justify\">Như vậy, việc bắt đầu hệ sinh th&aacute;i bằng hệ thống cơ sở dữ liệu ng&agrave;nh vừa đ&aacute;p ứng tốt nhu cầu thực tế của c&aacute;c đơn vị gi&aacute;o dục, vừa ph&ugrave; hợp với c&aacute;c th&ocirc;ng tư, quy định, hướng dẫn của Ch&iacute;nh phủ v&agrave; Bộ GD&amp;ĐT.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"2212docx-1640162552424\" src=\"https://solutions.viettel.vn/storage/giao-duc/2212docx-1640162552424.png\" style=\"height:136px; width:800px\" /></p>\r\n\r\n<p style=\"text-align:justify\"><em>Một sản phẩm CNTT thực sự &quot;sống&quot; chắc hẳn yếu tố quan trọng h&agrave;ng đầu l&agrave; t&igrave;m kiếm kh&aacute;ch h&agrave;ng. L&agrave;m thế n&agrave;o để Viettel c&oacute; thể &quot;t&igrave;m được tiếng n&oacute;i chung&quot; với rất nhiều trường học, sở gi&aacute;o dục?</em></p>\r\n\r\n<p style=\"text-align:justify\">Chất lượng nh&acirc;n lực tham gia chuyển đổi số l&agrave; yếu tố quan trọng nhất quyết định kết quả chuyển đổi số trong c&aacute;c tổ chức, đơn vị. Ng&agrave;nh GD đặc biệt kh&oacute; khăn khi c&aacute;c nh&acirc;n sự chuy&ecirc;n tr&aacute;ch CNTT ở cơ sở gi&aacute;o dục v&agrave; c&aacute;c cấp quản l&yacute; được ph&acirc;n c&ocirc;ng ki&ecirc;m nhiệm từ nguồn c&aacute;c thầy c&ocirc; dạy bộ m&ocirc;n tự nhi&ecirc;n hoặc tin học văn ph&ograve;ng, chưa thực sự hiểu về c&ocirc;ng nghệ th&ocirc;ng tin.</p>\r\n\r\n<p style=\"text-align:justify\">Giai đoạn đầu khi hỗ trợ ng&agrave;nh gi&aacute;o dục trong việc ứng dụng c&ocirc;ng nghệ th&ocirc;ng tin, Viettel chỉ nghĩ đến việc x&acirc;y dựng v&agrave; cung cấp phần mềm. Bởi đ&oacute; l&agrave; thế mạnh của ch&uacute;ng t&ocirc;i m&agrave; chưa t&iacute;nh đến giai đoạn vận h&agrave;nh, sử dụng sản phẩm trong thực tế.</p>\r\n\r\n<p style=\"text-align:justify\">Hiểu kh&oacute; khăn của c&aacute;c thầy c&ocirc; trong việc ứng dụng c&ocirc;ng nghệ, đặc biệt l&agrave; c&aacute;c thầy c&ocirc; lớn tuổi, n&ecirc;n việc đầu ti&ecirc;n ch&uacute;ng t&ocirc;i x&aacute;c định l&agrave; cần l&agrave;m ngay l&agrave; phải tổ chức một đội ngũ nh&acirc;n vi&ecirc;n lu&ocirc;n đồng h&agrave;nh hướng dẫn v&agrave; hỗ trợ c&aacute;c thầy c&ocirc;, c&aacute;c trường trong qu&aacute; tr&igrave;nh sử dụng.</p>\r\n\r\n<p style=\"text-align:justify\">Ch&uacute;ng t&ocirc;i lu&ocirc;n n&oacute;i với nhau: &quot;Phải đi c&ugrave;ng, trở th&agrave;nh người nh&agrave;, người đồng h&agrave;nh, thấu hiểu gi&aacute;o vi&ecirc;n, nh&agrave; trường th&igrave; mới gi&uacute;p được họ v&agrave; mới nhận được sự tin tưởng&quot;.</p>\r\n\r\n<p style=\"text-align:justify\">Sau v&agrave;i năm, c&aacute;c &quot;t&aacute;o gi&aacute;o dục Viettel&quot; tại c&aacute;c tỉnh hiểu c&aacute;c thầy c&ocirc;, hiểu những kh&oacute; khăn của ng&agrave;nh gi&aacute;o dục, thậm ch&iacute; hiểu cả kịch bản sư phạm để hướng dẫn c&aacute;c thầy c&ocirc; ứng dụng c&aacute;c t&iacute;nh năng trong c&aacute;c nền tảng c&ocirc;ng nghệ để bổ trợ cho phương ph&aacute;p thay đổi phương ph&aacute;p giảng dạy tới học tr&ograve;.</p>\r\n\r\n<p style=\"text-align:justify\">Đặc biệt, trong qu&aacute; tr&igrave;nh nghi&ecirc;n cứu x&acirc;y dựng hệ sinh th&aacute;i gi&aacute;o dục số, Viettel đ&atilde; b&aacute;m s&aacute;t những nhu cầu thực tiễn nhằm t&igrave;m ra lời giải cho b&agrave;i to&aacute;n đẩy mạnh chuyển đổi số to&agrave;n diện tại c&aacute;c cơ sở gi&aacute;o dục tr&ecirc;n to&agrave;n quốc. Với hệ sinh th&aacute;i gi&aacute;o dục số Viettel, người d&ugrave;ng chỉ cần một t&agrave;i khoản duy nhất để đăng nhập v&agrave;o c&aacute;c nền tảng.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"2212docx-1640162552526\" src=\"https://solutions.viettel.vn/storage/giao-duc/2212docx-1640162552526.png\" /></p>\r\n\r\n<p style=\"text-align:justify\"><em>Trong qu&aacute; tr&igrave;nh tiếp x&uacute;c với những người trực tiếp l&agrave;m trong ng&agrave;nh gi&aacute;o dục, c&aacute;c kỹ sư của Viettel đ&atilde; học hỏi được những g&igrave;? Điều đ&oacute; đ&atilde; gi&uacute;p dự &aacute;n c&oacute; những bước ngoặt thay đổi đ&aacute;ng kể thế n&agrave;o?</em></p>\r\n\r\n<p style=\"text-align:justify\">Trong suốt 2 năm đầu triển khai hệ sinh th&aacute;i gi&aacute;o dục số, t&ocirc;i đ&atilde; c&ugrave;ng đồng đội đi &quot;g&otilde; cửa&quot; 55 tỉnh, th&agrave;nh để giới thiệu, thuyết phục &aacute;p dụng một hệ sinh th&aacute;i tổng quan cho ng&agrave;nh gi&aacute;o dục. Đến h&ocirc;m nay, đ&atilde; c&oacute; hơn 5 năm li&ecirc;n tục hỗ trợ thầy c&ocirc;, nh&agrave; trường l&agrave;m quen, ứng dụng hiệu quả c&ocirc;ng nghệ v&agrave;o c&aacute;c nghiệp vụ sư phạm v&agrave; quản l&yacute; đ&agrave;o tạo, gi&uacute;p tối ưu chất lượng c&aacute;c hoạt động gi&aacute;o dục. Đ&acirc;y l&agrave; một h&agrave;nh tr&igrave;nh đầy cảm x&uacute;c kh&ocirc;ng chỉ của ri&ecirc;ng t&ocirc;i m&agrave; của tất cả &quot;t&aacute;o gi&aacute;o dục Viettel&quot;.</p>\r\n\r\n<p style=\"text-align:justify\">Ch&uacute;ng t&ocirc;i tin rằng, với sự đồng h&agrave;nh của Viettel về c&ocirc;ng nghệ v&agrave; đội ngũ nh&acirc;n sự hỗ trợ 24/7, c&aacute;c thầy c&ocirc; đ&atilde; v&agrave; đang tự tin hơn ứng dụng c&aacute;c nền tảng c&ocirc;ng nghệ v&agrave;o c&aacute;c hoạt động dạy, học, đ&aacute;nh gi&aacute;, quản l&yacute;. Họ sẽ dần nhận ra rằng họ cần thay đổi kh&ocirc;ng chỉ về nhận thức m&agrave; c&ograve;n cần thay đổi th&oacute;i quen, phương thức quản l&yacute; v&agrave; phương thức dạy, học, đ&aacute;nh gi&aacute; với sự hỗ trợ của c&aacute;c nền tảng c&ocirc;ng nghệ.</p>\r\n\r\n<p style=\"text-align:justify\">Tiếp x&uacute;c với đội ngũ nh&agrave; gi&aacute;o, ch&uacute;ng t&ocirc;i đ&atilde; nhận được rất nhiều g&oacute;p &yacute;, chia sẻ ch&acirc;n th&agrave;nh, đ&oacute; ch&iacute;nh l&agrave; những chất liệu qu&yacute; gi&aacute; gi&uacute;p ch&uacute;ng t&ocirc;i tiếp tục ho&agrave;n thiện sản phẩm. &quot;Phần thưởng&quot; lớn nhất m&agrave; ch&uacute;ng t&ocirc;i nhận được đ&oacute; l&agrave; c&aacute;i &quot;&ocirc;m&quot; v&agrave; lời nhắn cảm ơn của rất nhiều thầy c&ocirc; hiệu trưởng v&agrave; l&atilde;nh đạo Sở, Ph&ograve;ng Gi&aacute;o dục khi hai b&ecirc;n phối hợp triển khai hệ thống.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"2212docx-1640162552985\" src=\"https://solutions.viettel.vn/storage/giao-duc/2212docx-1640162552985.png\" style=\"height:185px; width:800px\" /></p>\r\n\r\n<p style=\"text-align:justify\"><em>Dường như Covid-19 l&agrave; &quot;c&uacute; h&iacute;ch&quot; khiến &yacute; nghĩa của hệ sinh th&aacute;i gi&aacute;o dục số Viettel được khẳng định tầm quan trọng v&agrave; nhanh ch&oacute;ng lan tỏa? D&ugrave; vậy, dịch chắc chắn sẽ qua đi v&agrave; ch&uacute;ng ta vẫn phải khẳng định rằng việc dạy học trực tiếp tại trường l&agrave; điều kh&ocirc;ng thể thay thế. Vậy những đ&oacute;ng g&oacute;p của hệ sinh th&aacute;i gi&aacute;o dục n&agrave;y sẽ tiếp tục lan tỏa &yacute; nghĩa như thế n&agrave;o trong thời gian tới khi cuộc sống trở về trạng th&aacute;i b&igrave;nh thường?</em></p>\r\n\r\n<p style=\"text-align:justify\">Chuyển đổi số trong gi&aacute;o dục l&agrave; xu thế tất yếu, đ&atilde; được hoạch định bởi ch&iacute;nh phủ v&agrave; Bộ Gi&aacute;o dục &amp; Đ&agrave;o tạo nhưng Covid-19 đ&uacute;ng l&agrave; c&uacute; h&iacute;ch đẩy nhanh tốc độ của tiến tr&igrave;nh n&agrave;y.</p>\r\n\r\n<p style=\"text-align:justify\">Cụ thể, trong thời gian c&oacute; gi&atilde;n c&aacute;ch, kh&ocirc;ng thể đến trường dạy v&agrave; học trực tiếp, gi&aacute;o vi&ecirc;n v&agrave; học sinh buộc phải chuyển sang h&igrave;nh thức dạy v&agrave; học trực tuyến. Khi bắt đầu, hầu hết c&aacute;c thầy c&ocirc; v&agrave; trường học chỉ ứng dụng c&aacute;c nền tảng cung cấp t&iacute;nh năng hội họp truyền h&igrave;nh để gặp học sinh v&agrave; dạy học. Với h&igrave;nh thức n&agrave;y, nh&agrave; trường v&agrave; c&aacute;c gi&aacute;o vi&ecirc;n gặp kh&oacute; trong việc truyền tải tới học sinh.</p>\r\n\r\n<p style=\"text-align:justify\">Với c&aacute;c giải ph&aacute;p c&ocirc;ng nghệ, c&aacute;c thầy c&ocirc; đ&atilde; dần thay đổi th&oacute;i quen cũ, c&oacute; sự kết hợp giữa dạy, học trực tiếp v&agrave; sự hỗ trợ của c&ocirc;ng nghệ. C&aacute;c thầy c&ocirc; sẽ dần nhận ra rằng c&aacute;c nền tảng c&ocirc;ng nghệ thực sự đ&atilde; hỗ trợ họ rất nhiều trong c&ocirc;ng t&aacute;c giảng dạy v&agrave; đ&aacute;nh gi&aacute; học sinh.</p>\r\n\r\n<p style=\"text-align:justify\">Ngay từ khi đồng h&agrave;nh c&ugrave;ng ng&agrave;nh gi&aacute;o dục, Viettel đ&atilde; l&agrave; hướng đến tương lai l&acirc;u d&agrave;i đồng h&agrave;nh c&ugrave;ng ng&agrave;nh gi&aacute;o dục. V&igrave; vậy, ch&uacute;ng t&ocirc;i x&aacute;c định rằng Viettel c&oacute; thể sẽ mất nhiều thời gian rất l&acirc;u để c&ugrave;ng c&aacute;c thầy c&ocirc; tạo dựng những th&oacute;i quen mới, nếu thế hệ ch&uacute;ng t&ocirc;i chưa l&agrave;m xong th&igrave; c&aacute;c thế hệ tiếp theo của Viettel sẽ tiếp nối để đồng h&agrave;nh c&ugrave;ng ng&agrave;nh gi&aacute;o dục, tiếp tục đưa những nền tảng gi&aacute;o dục tốt v&agrave;o ng&agrave;nh gi&aacute;o dục để đ&aacute;p lại niềm tin của c&aacute;c thầy c&ocirc; đối với Viettel.</p>\r\n\r\n<p style=\"text-align:justify\">V&igrave; c&aacute;c l&yacute; do tr&ecirc;n, ngay cả khi dịch bệnh kết th&uacute;c, hệ sinh th&aacute;i gi&aacute;o dục số của Viettel vẫn đ&oacute;ng vai tr&ograve; l&agrave; giải ph&aacute;p hữu hiệu, hỗ trợ đắc lực cho mọi đối tượng trong ng&agrave;nh gi&aacute;o dục n&acirc;ng cao chất lượng đ&agrave;o tạo v&agrave; quản l&yacute; vận h&agrave;nh.</p>', 'Nguyễn Tấn Phát', '2022-02-23', 1, 0, 0),
+(8, 'Nền tảng thông tin y tế cơ sở của Viettel trở thành giải pháp chuyển đổi số tiêu biểu năm 2021', NULL, 0, '<p><em><strong>Ng&agrave;y 10/12/2021, nền tảng Th&ocirc;ng tin Y tế cơ sở của Viettel Solutions&nbsp;đ&atilde; được vinh danh l&agrave; sản phẩm, giải ph&aacute;p chuyển đối số ti&ecirc;u biểu của năm trong L&ecirc; c&ocirc;ng bố Giải thưởng Chuyển đổi số Việt Nam tổ chức tại Nh&agrave; h&aacute;t &Acirc;u Cơ H&agrave; Nội.</strong></em></p>', '1645587894-baiviet.png', '<p style=\"text-align:justify\">L&agrave; một sản phẩm trong hệ sinh th&aacute;i chuyển đổi số ng&agrave;nh Y do Viettel Solutions&nbsp;ph&aacute;t triển, nền tảng quản l&yacute; th&ocirc;ng tin Y tế cơ sở (V20) nhằm phục vụ c&ocirc;ng t&aacute;c quản l&yacute; d&acirc;n số, kh&aacute;m chữa bệnh, quản l&yacute; ti&ecirc;m chủng, bệnh l&acirc;y nhiễm/kh&ocirc;ng l&acirc;y nhiễm&hellip;, c&aacute;c b&aacute;o thống k&ecirc;, sổ s&aacute;ch ngh&agrave;nh y v&agrave; c&aacute;c chương tr&igrave;nh mục ti&ecirc;u y tế của tuyến y tế x&atilde;/phường, ph&ograve;ng kh&aacute;m, trạm y tế cơ quan v&agrave; c&aacute;c cơ sở kh&aacute;m chữa bệnh c&oacute; quy m&ocirc; nhỏ đảm bảo c&aacute;c ti&ecirc;u chuẩn, y&ecirc;u cầu của Bộ Y tế.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"d12a0663074acb14925b\" src=\"https://solutions.viettel.vn/storage/logo/d12a0663074acb14925b.jpg\" style=\"height:599px; width:900px\" /></p>\r\n\r\n<p style=\"text-align:justify\">Nền tảng V20 đ&atilde; xuất sắc vượt qua c&aacute;c ti&ecirc;u ch&iacute; m&agrave; Ban Gi&aacute;m khảo&nbsp;đưa ra bao gồm những lợi &iacute;ch, gi&aacute; trị đem lại cho cộng đồng, việc đ&aacute;p ứng c&aacute;c nghiệp vụ, khả năng t&iacute;ch hợp, t&iacute;nh t&ugrave;y biến, c&ocirc;ng nghệ ứng dụng v&agrave; bảo mật th&ocirc;ng tin. Giải ph&aacute;p gi&uacute;p tăng cường c&ocirc;ng t&aacute;c chăm s&oacute;c sức khỏe ban đầu đặc biệt l&agrave; bệnh kh&ocirc;ng l&acirc;y nhiễm, ti&ecirc;m chủng, cho người d&acirc;n th&ocirc;ng qua cải thiện việc tiếp cận dịch vụ, c&ocirc;ng bằng, chất lượng v&agrave; sử dụng dịch vụ, đặc biệt đối với v&ugrave;ng ngh&egrave;o, v&ugrave;ng s&acirc;u v&agrave; c&aacute;c d&acirc;n tộc thiểu số. Đối với c&aacute;c cơ sở y tế, việc ứng dụng V20 gi&uacute;p tiết kiệm thời gian, nguồn lực l&agrave;m thủ c&ocirc;ng, kết nối li&ecirc;n th&ocirc;ng với bệnh viện tuyến tr&ecirc;n v&agrave; cơ quan BHXH phục vụ c&ocirc;ng t&aacute;c quản l&yacute; thanh to&aacute;n hồ sơ bảo hiểm y tế. Đặc biệt, V20 được t&iacute;ch hợp đầy đủ, to&agrave;n tr&igrave;nh c&aacute;c t&iacute;nh năng cần thiết &aacute;p dụng cho c&aacute;c cơ sở y tế tr&ecirc;n to&agrave;n quốc, do đ&oacute; sẽ đ&aacute;p ứng được nghiệp vụ, nhu cầu của to&agrave;n bộ người d&ugrave;ng trạm y tế, ph&ograve;ng kh&aacute;m. B&ecirc;n cạnh đ&oacute;, với V20, c&ocirc;ng t&aacute;c t&aacute;c quản l&yacute;, điều h&agrave;nh của Sở Y tế, Bộ y tế th&ocirc;ng qua c&aacute;c b&aacute;o c&aacute;o tổng hợp ng&agrave;nh y, hỗ trợ thu thập, trao đổi, lưu trữ v&agrave; khai th&aacute;c th&ocirc;ng tin giữa c&aacute;c đơn vị.</p>\r\n\r\n<p style=\"text-align:justify\">&Ocirc;ng Khổng Văn Đ&ocirc;ng &ndash; Gi&aacute;m đốc Trung t&acirc;m Y tế số chia sẻ: &ldquo;Giải thưởng l&agrave; minh chứng cho sự nỗ lực v&agrave; &yacute; ch&iacute; của to&agrave;n thể CBNV trung t&acirc;m Y tế số, ch&uacute;ng t&ocirc;i tự h&agrave;o đ&atilde; c&oacute; những đ&oacute;ng g&oacute;p t&iacute;ch cực cho chuyển đổi số ng&agrave;nh Y tế Việt Nam, đặc biệt l&agrave; trong giai đoạn kh&oacute; khăn của dịch bệnh.&rdquo;</p>\r\n\r\n<p style=\"text-align:justify\">Hiện Hệ thống Y tế cơ sở version 1 đang được triển khai cho hơn 3.300 cơ sở y tế tr&ecirc;n to&agrave;n quốc. Năm 2022, Viettel Solutions&nbsp;sẽ triển khai n&acirc;ng cấp hệ thống cho 100% cơ sở đang sử dụng. Theo đ&oacute;, kh&aacute;ch h&agrave;ng sẽ được trải nghiệm hệ thống &ldquo;all in one&rdquo;, to&agrave;n bộ t&iacute;nh năng, dữ liệu được t&iacute;ch hợp v&agrave;o một&nbsp;hệ thống quản l&yacute; đồng nhất, duy nhất v&agrave; xuy&ecirc;n suốt. Với sự ph&aacute;t triển, n&acirc;ng cấp ho&agrave;n thiện hệ thống, trong thời gian tới, Viettel Solutions đặt mục ti&ecirc;u chiếm lĩnh 50% thị phần tr&ecirc;n thị trường. Dự kiến đến th&aacute;ng 1/2022, Viettel Solutions sẽ ho&agrave;n th&agrave;nh triển khai th&iacute; điểm hệ thống cho 14 cơ sở y tế tại quận Long Bi&ecirc;n, H&agrave; Nội trước khi triển khai tr&ecirc;n diện rộng.</p>\r\n\r\n<p style=\"text-align:justify\">C&oacute; thể thấy, năm 2021 l&agrave; một năm th&agrave;nh c&ocirc;ng của Viettel Solutions về&nbsp;Y tế số trong h&agrave;nh tr&igrave;nh khẳng định năng lực v&agrave; vị thế tr&ecirc;n thị trường với 05 giải thưởng quốc tế v&agrave; 01 giải thưởng trong nước.</p>\r\n\r\n<p style=\"text-align:justify\"><em>Giải thưởng Chuyển đổi số Việt Nam VDA l&agrave; Giải thưởng do Hội Truyền th&ocirc;ng số Việt Nam (VDCA) tổ chức. Giải thưởng được trao cho những giải ph&aacute;p chuyển đổi số của c&aacute;c đơn vị, tổ chức c&oacute; th&agrave;nh tựu trong c&ocirc;ng cuộc chuyển đổi số, ph&aacute;t triển kinh tế số của Việt Nam. Năm 2021, giải thưởng nhận được 300 hồ sơ tham dự từ c&aacute;c cơ quan tổ chức, cộng đồng doanh nghiệp v&agrave; c&aacute; nh&acirc;n tr&ecirc;n to&agrave;n quốc v&agrave; t&ocirc;n vinh 53 cơ quan, đơn vị, sản phẩm xuất sắc nhất ở 4 hạng mục.</em></p>', 'Nguyễn Tấn Phát', '2022-02-23', 0, 0, 0),
+(9, 'Viettel mang đến một “thế giới phẳng” tại triển lãm ITU Digital World 2021', NULL, 10, '<ul>\r\n	<li><em><strong>Viettel mang đến h&agrave;nh tr&igrave;nh trải nghiệm số tại triển l&atilde;m ITU Digital World 2021</strong></em></li>\r\n	<li><em><strong>H&agrave;nh tr&igrave;nh trải nghiệm cho c&ocirc;ng d&acirc;n số đầu ti&ecirc;n tại triển l&atilde;m ITU Digital World 2021</strong></em></li>\r\n</ul>', '1645701538-baiviet.jpg', '<p style=\"text-align:justify\">Ng&agrave;y 12/10/2021, Tập đo&agrave;n C&ocirc;ng nghiệp &ndash; Viễn th&ocirc;ng Qu&acirc;n đội (Viettel) ch&iacute;nh thức khai trương kh&ocirc;ng gian triển l&atilde;m ảo 3D tại Hội nghị v&agrave; Triển l&atilde;m Thế giới số 2021 (ITU Digital World). Đ&acirc;y l&agrave; lần thứ 2 li&ecirc;n tiếp, Viettel được Bộ TT&amp;TT v&agrave; Li&ecirc;n minh Viễn th&ocirc;ng Quốc tế (ITU) tin tưởng giao nhiệm vụ x&acirc;y dựng nền tảng triển l&atilde;m ảo cho to&agrave;n bộ sự kiện v&agrave; chủ tr&igrave; gian h&agrave;ng Việt Nam, với mong muốn c&ugrave;ng c&aacute;c doanh nghiệp lớn tại Việt Nam mang giải ph&aacute;p số ra to&agrave;n cầu.</p>\r\n\r\n<p style=\"text-align:justify\">Tại triển l&atilde;m ITU Digital World 2021, Viettel x&acirc;y dựng một kh&ocirc;ng gian ảo với Platform 3D, c&ocirc;ng nghệ 100% Make in Vietnam được c&aacute;c kỹ sư Viettel t&ugrave;y biến, mang đến h&agrave;nh tr&igrave;nh trải nghiệm đầu ti&ecirc;n cho c&ocirc;ng d&acirc;n số. (<a href=\"https://3d.digitalworld2021.vn/booth/viettel-63\">https://3d.digitalworld2021.vn/booth/viettel-63</a>)</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"245084023_4433188233463146_5025137635491442787_n\" src=\"https://solutions.viettel.vn/storage/tin-tuc/245084023-4433188233463146-5025137635491442787-n.jpg\" style=\"height:900px; width:900px\" /></p>\r\n\r\n<p style=\"text-align:justify\">Với sứ mệnh &ldquo;Ti&ecirc;n phong chủ lực kiến tạo x&atilde; hội số&rdquo;, c&aacute;c giải ph&aacute;p của Viettel được ứng dụng v&agrave;o mọi lĩnh vực của đời sống, lấy người d&acirc;n l&agrave;m trung t&acirc;m để tạo dựng n&ecirc;n một kh&ocirc;ng gian trải nghiệm c&ocirc;ng nghệ trọn vẹn; lắng nghe v&agrave; phục vụ từng nhu cầu kh&aacute;c biệt của người d&acirc;n.</p>\r\n\r\n<p style=\"text-align:justify\">Gian h&agrave;ng Viettel bao gồm 8 Hệ sinh th&aacute;i số: Ch&iacute;nh phủ số, Y tế số, Gi&aacute;o dục số, Doanh nghiệp số, Gia đ&igrave;nh số, Giao th&ocirc;ng số, Hạ tầng số &amp; Hệ thống an ninh bảo mật; T&agrave;i ch&iacute;nh số Logistic &amp; Thương mại điện tử. Tại đ&acirc;y, mỗi kh&aacute;ch tham quan sẽ l&agrave; những c&ocirc;ng d&acirc;n số, trải nghiệm trực tiếp h&agrave;nh tr&igrave;nh từ khi sinh ra đến khi trưởng th&agrave;nh trong một x&atilde; hội số th&ocirc;ng minh.</p>\r\n\r\n<p style=\"text-align:justify\">Ngo&agrave;i ra, tại gian h&agrave;ng của Viettel c&ograve;n c&oacute; t&iacute;nh năng &ldquo;Live tour &ndash; tham quan trực tiếp&rdquo;, g&oacute;p phần tạo ra một &ldquo;thế giới phẳng&rdquo;, gi&uacute;p kh&aacute;ch h&agrave;ng tại bất k&igrave; nơi đ&acirc;u tr&ecirc;n thế giới đều c&oacute; thể kết nối, tham quan gian h&agrave;ng v&agrave; trao đổi trực tiếp với đội ngũ nh&acirc;n vi&ecirc;n Viettel m&agrave; kh&ocirc;ng gặp trở ngại về mặt kh&ocirc;ng gian.</p>\r\n\r\n<p style=\"text-align:justify\">Trong thời gian qua, c&aacute;c giải ph&aacute;p của Viettel từng bước tạo ra những thay đổi t&iacute;ch cực trong mọi lĩnh vực của cuộc sống. Hệ sinh th&aacute;i Y tế với mục ti&ecirc;u mỗi người d&acirc;n Việt nam từ khi sinh ra đều c&oacute; một trợ l&yacute; sức khỏe th&ocirc;ng minh, được theo d&otilde;i v&agrave; chăm s&oacute;c sức khỏe trọn đời. Ti&ecirc;u biểu như Hệ thống hỗ trợ kh&aacute;m, chữa bệnh từ xa Telehealth kết nối h&agrave;ng khoảng 3.000 cơ sở y tế tr&ecirc;n to&agrave;n quốc, với khoảng 2.000 bệnh &aacute;n tr&ecirc;n hệ thống, kết nối 148 cơ sở y tế điều trị bệnh nh&acirc;n F0 nặng tại c&aacute;c tỉnh/Th&agrave;nh phố l&agrave; điểm n&oacute;ng b&ugrave;ng ph&aacute;t dịch Covid-19.</p>\r\n\r\n<p style=\"text-align:justify\">Hệ thống quản l&yacute; học v&agrave; thi trực tuyến K12Online tạo ra c&ocirc;ng cụ duy tr&igrave; việc dạy học trực tuyến trong giai đoạn dịch Covid-19, khởi tạo tại hơn 32.000 trường tr&ecirc;n cả nước với hơn 600.000 học liệu trực tuyến được x&acirc;y dựng.</p>\r\n\r\n<p style=\"text-align:justify\">Gian h&agrave;ng của Viettel sẽ được duy tr&igrave; trong một th&aacute;ng từ ng&agrave;y 12/10 đến 12/11/2021, phục vụ người d&acirc;n, doanh nghiệp tham quan, kết nối v&agrave; trao đổi th&ocirc;ng tin tại địa chỉ:&nbsp;<a href=\"https://3d.digitalworld2021.vn/booth/viettel-63\">https://3d.digitalworld2021.vn/booth/viettel-63</a></p>\r\n\r\n<p style=\"text-align:justify\">T&iacute;nh đến thời điểm hiện tại, Viettel c&oacute; gi&aacute; trị thương hiệu đạt tr&ecirc;n 6 tỷ USD, l&agrave; thương hiệu viễn th&ocirc;ng đứng số 1 Đ&ocirc;ng Nam &Aacute;, thứ 8 Ch&acirc;u &Aacute; v&agrave; thứ 24 Thế giới. Với hạ tầng số di động 5G đầu ti&ecirc;n tại Việt Nam, hạ tầng c&aacute;p quang truyền dẫn lớn nhất với gần 500.000 km v&agrave; hơn 50.000 trạm ph&aacute;t s&oacute;ng 2G,3G,4G tr&ecirc;n cả nước, 5 trung t&acirc;m dữ liệu hiện đại nhất khu vực đạt ti&ecirc;u chuẩn Rated 3 &ndash; TIA 942 v&agrave; PCI DSS, đảm bảo hạ tầng cho c&aacute;c giải ph&aacute;p c&ocirc;ng nghệ lớn mang tầm quốc gia</p>', 'Nguyễn Tấn Phát', '2022-02-24', 0, 1, 0),
+(10, 'UBND Tỉnh Hưng Yên và Viettel thực hiện ký kết thỏa thuận hợp tác chuyển đổi số giai đoạn 2021 – 2025', NULL, 5, '<p><em><strong>Ng&agrave;y 16/7/2021, tại trụ sở UBND tỉnh Hưng Y&ecirc;n, Tập đo&agrave;n C&ocirc;ng nghiệp - Viễn th&ocirc;ng Qu&acirc;n đội (Viettel) v&agrave; UBND Tỉnh Hưng Y&ecirc;n đ&atilde; k&yacute; kết thỏa thuận hợp t&aacute;c chiến lược về chuyển đổi số giai đoạn 2021-2025.&nbsp;</strong></em><em><strong>Việc thực hiện k&yacute; kết giữa UBND tỉnh Hưng Y&ecirc;n v&agrave; Viettel l&agrave; một bước tiến quan trọng của tỉnh trong việc x&acirc;y dựng v&agrave; ph&aacute;t triển ch&iacute;nh quyền số, tăng cường kết nối giữa ch&iacute;nh quyền với người d&acirc;n v&agrave; hướng đến chuyển đổi số to&agrave;n diện.</strong></em></p>', '1645701657-baiviet.jpg', '<p style=\"text-align:justify\">Theo đ&oacute;, trong giai đoạn 2021 - 2025, Tập đo&agrave;n Viettel sẽ thực hiện mục ti&ecirc;u chiến lược về chuyển đổi số cho UBND tỉnh Hưng Y&ecirc;n với c&aacute;c nội dung sau: X&acirc;y dựng, ph&aacute;t triển hạ tầng viễn th&ocirc;ng - c&ocirc;ng nghệ th&ocirc;ng tin tr&ecirc;n địa b&agrave;n tỉnh. X&acirc;y dựng nền tảng đ&ocirc; thị th&ocirc;ng minh v&agrave; hỗ trợ x&acirc;y dựng đề &aacute;n chuyển đổi số. Hợp t&aacute;c ph&aacute;t triển nguồn nh&acirc;n lực; hợp t&aacute;c to&agrave;n diện, hỗ trợ tỉnh Hưng Y&ecirc;n trong việc bảo đảm an to&agrave;n th&ocirc;ng tin mạng v&agrave; an ninh mạng.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"9fe3926593cd42787cfa3cf659381963\" src=\"https://solutions.viettel.vn/storage/tin-tuc/9fe3926593cd42787cfa3cf659381963.jpg\" style=\"height:600px; width:900px\" /></p>\r\n\r\n<p style=\"text-align:justify\"><em>Đ/c Thiếu tướng L&ecirc; Đăng Dũng - Chủ tịch ki&ecirc;m Tổng gi&aacute;m đốc Tập đo&agrave;n C&ocirc;ng nghiệp - Viễn th&ocirc;ng qu&acirc;n đội Viettel ph&aacute;t biểu tại hội nghị</em></p>\r\n\r\n<p style=\"text-align:justify\">Tại buổi k&yacute; kết, Tập đo&agrave;n Viettel&nbsp;cam kết sẽ thực hiện tư vấn, giới thiệu v&agrave; triển khai tr&ecirc;n địa b&agrave;n tỉnh Hưng Y&ecirc;n những c&ocirc;ng nghệ mới nhất, th&agrave;nh tựu mới nhất trong lĩnh vực viễn th&ocirc;ng v&agrave; c&ocirc;ng nghệ th&ocirc;ng tin; Triển khai c&aacute;c ch&iacute;nh s&aacute;ch ưu đ&atilde;i cho tỉnh ph&ugrave; hợp với quy định của ph&aacute;p luật; Ph&aacute;t triển, triển khai c&aacute;c ứng dụng c&ocirc;ng nghệ th&ocirc;ng tin trong tỉnh với trọng t&acirc;m ph&aacute;t triển ch&iacute;nh quyền số v&agrave; chuyển đổi số cụ thể ở c&aacute;c lĩnh vực như: Y tế, gi&aacute;o dục, an ninh trật tự, du lịch, giao th&ocirc;ng, n&ocirc;ng nghiệp, m&ocirc;i trường, quy hoạch&hellip;</p>\r\n\r\n<p style=\"text-align:justify\">Ph&aacute;t biểu tại hội nghị, đồng ch&iacute; Trần Quốc Văn - Ph&oacute; B&iacute; thư Tỉnh ủy, Chủ tịch UBND tỉnh Hưng Y&ecirc;n khẳng định: Trong thời gian tới, UBND tỉnh sẽ tạo điều kiện trong khu&ocirc;n khổ của ph&aacute;p luật để Tập đo&agrave;n&nbsp;Viettel thực hiện c&aacute;c nội dung theo thỏa thuận hợp t&aacute;c.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"2ae1dacbdfbd50b67e839cafb85568d1\" src=\"https://solutions.viettel.vn/storage/tin-tuc/2ae1dacbdfbd50b67e839cafb85568d1.jpg\" style=\"height:584px; width:900px\" /></p>\r\n\r\n<p style=\"text-align:justify\"><em>Đ/c Đại t&aacute; Nguyễn Đ&igrave;nh Chiến - Ph&oacute; TGĐ Tập đo&agrave;n v&agrave; Đ/c Nguyễn Duy Hưng ph&oacute; chủ tịch UBND tỉnh Hưng Y&ecirc;n k&yacute; kết thỏa thuận hợp t&aacute;c to&agrave;n diện</em></p>\r\n\r\n<p style=\"text-align:justify\">B&ecirc;n cạnh đ&oacute;, UBND tỉnh Hưng Y&ecirc;n cam kết sẽ tạo điều kiện, phối hợp v&agrave; cung cấp những th&ocirc;ng tin cần thiết để Tập đo&agrave;n Viettel c&oacute; thể tiến h&agrave;nh nghi&ecirc;n cứu, khảo s&aacute;t, x&acirc;y dựng, triển khai c&aacute;c nội dung hợp t&aacute;c; chỉ đạo c&aacute;c sở, ban, ng&agrave;nh phối hợp với Tập đo&agrave;n Viettel triển khai những nội dung của thỏa thuận hợp t&aacute;c.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"559b2c026b89edc6cb16c3d7750b841b\" src=\"https://solutions.viettel.vn//storage/tin-tuc/559b2c026b89edc6cb16c3d7750b841b.jpg\" style=\"height:669px; width:900px\" /></p>\r\n\r\n<p style=\"text-align:justify\"><em>Đ/c thượng t&aacute; Nguyễn Mạnh Hổ - TGĐ TCT GPDN Viettel thay mặt đo&agrave;n c&ocirc;ng t&aacute;c trao tặng 04 hệ thống hội chẩn từ xa phục vụ c&ocirc;ng t&aacute;c chăm s&oacute;c, điều trị bệnh trong điều kiện dịch Covid-19.</em></p>\r\n\r\n<p style=\"text-align:justify\">Cũng trong ng&agrave;y 16/7/2021, Tập đo&agrave;n Viettel đ&atilde; thực hiện trao tặng tỉnh Hưng Y&ecirc;n 4 hệ thống hội chẩn từ xa, phục vụ c&ocirc;ng t&aacute;c chăm s&oacute;c, thăm kh&aacute;m v&agrave; điều trị bệnh trước những diễn biến của dịch bệnh COVID-19.</p>', 'Nguyễn Tấn Phát', '2022-02-24', 0, 0, 0),
+(11, 'Viettel đứng số 1 bảng xếp hạng Công ty Công nghệ Thông tin - Viễn thông uy tín Việt Nam năm 2021', NULL, 2, '<p>Ng&agrave;y 20/7/2021, C&ocirc;ng ty Cổ phần B&aacute;o c&aacute;o Đ&aacute;nh gi&aacute; Việt Nam (Vietnam Report) ch&iacute;nh thức c&ocirc;ng bố Tập đo&agrave;n C&ocirc;ng nghiệp &ndash; Viễn th&ocirc;ng Qu&acirc;n đội (Viettel) đứng số 1 trong bảng xếp hạng Top 10 C&ocirc;ng ty C&ocirc;ng nghệ th&ocirc;ng tin &ndash; Viễn th&ocirc;ng uy t&iacute;n năm 2021.</p>', '1647355647-baiviet.jpg', '<p style=\"text-align:center\"><img alt=\"\" src=\"https://solutions.viettel.vn/storage/202989747-4171280849653887-3561161539776452406-n.jpg\" style=\"height:720px; width:900px\" /></p>\r\n\r\n<p style=\"text-align:justify\">Trong xu hướng b&atilde;o h&ograve;a thị trường truyền thống, chiến lược chuyển đổi từ nh&agrave; cung cấp dịch vụ viễn th&ocirc;ng sang nh&agrave; cung cấp dịch vụ số gi&uacute;p Viettel ti&ecirc;n phong trong việc cung cấp c&aacute;c giải ph&aacute;p, nền tảng, dịch vụ v&agrave; sản phẩm chuyển đổi số, l&agrave; đơn vị chủ lực kiến tạo x&atilde; hội số tại Việt Nam. Chuyển đổi số th&agrave;nh c&ocirc;ng l&agrave; yếu tố mang về Top #1 cho Viettel khi Vietnam Report đ&aacute;nh gi&aacute; v&agrave; lượng h&oacute;a một c&aacute;ch kh&aacute;ch quan, khoa học v&agrave; độc lập, căn cứ theo kết quả đ&aacute;nh gi&aacute; t&agrave;i ch&iacute;nh của doanh nghiệp, xếp hạng uy t&iacute;n doanh nghiệp tr&ecirc;n truyền th&ocirc;ng bằng phương ph&aacute;p Media coding v&agrave; đ&aacute;nh gi&aacute; của c&aacute;c b&ecirc;n li&ecirc;n quan.</p>\r\n\r\n<p style=\"text-align:justify\">Chi tiết b&aacute;o c&aacute;o xem tại:&nbsp;<a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Ftoptenvietnam.vn%2F%3Ffbclid%3DIwAR0uOxe7q4XfsVigP-7akDHtZLsew4s3N3r5EI4QM2xqWO39kEvl0cQtcTI&amp;h=AT2Oz38V-qlQG1eb7ym1mIDso7CdVUr_zRn7N3U5XODr8XeVT7hngwWmv84iRDJMicv5P882VUTUg5arhr2ZoI8YpJ_j_8t7BLX3n1-hGran082bn5ERfTvhOMBWsVTvkMxvExICph4EFLuBXN8&amp;__tn__=-UK-R&amp;c[0]=AT1Jstuy6sXAPIE8a4IYfG2cSSCHKNSVlFEKAcJgsN8lgzTUT6vkaEamNMn7DrYkY5_0__Olcs1l5SRFs9YiyxaeWCXw3wBwcTUNUBhdKSOqTAzOg1w0SQrx9tHKeqk-lvIFOMqrCLfP7NnvZqS9AF6jPrJ3G2Wq14g7V2k7kbE47CkDPS0khgSYyu2ooOGZVJvQtnIY\" rel=\"nofollow noopener\" tabindex=\"0\" target=\"_blank\">https://toptenvietnam.vn/</a></p>\r\n\r\n<p style=\"text-align:justify\">Gần đ&acirc;y nhất, v&agrave;o th&aacute;ng 2/2021, Viettel vinh dự l&agrave; thương hiệu Việt Nam duy nhất, đồng thời l&agrave; thương hiệu viễn th&ocirc;ng duy nhất tại Đ&ocirc;ng Nam &Aacute; c&oacute; mặt v&agrave; thăng hạng trong bảng xếp hạng Top 500 thương hiệu c&oacute; gi&aacute; trị nhất thế giới 2021 với vị tr&iacute; thứ 325, định gi&aacute; thương hiệu với gi&aacute; trị 6,016 tỉ USD.</p>', 'Nguyễn Tấn Phát', '2022-03-15', 0, 1, 0),
+(12, 'Viettel Solutions tiếp tục thắng lớn tại IBA Stevie Awards 2021', NULL, 0, '<p style=\"text-align:justify\"><em><strong>Với những gi&aacute; trị thực tế mang lại cho cộng đồng, c&aacute;c giải ph&aacute;p của Viettel Solutions tiếp tục được đ&aacute;nh gi&aacute; cao tại giải thưởng Kinh doanh quốc tế - IBA Stevie Awards 2021. Theo đ&oacute;, Viettel Solutions l&agrave; đơn vị được vinh danh nhiều nhất trong Tập đo&agrave;n Viettel với 5 giải thưởng.</strong></em></p>', '1647355869-baiviet.jpg', '<p style=\"text-align:center\"><img alt=\"Giai thuong Stevie Awards\" src=\"https://solutions.viettel.vn/storage/tin-tuc/giai-thuong-stevie-awards.jpg\" style=\"height:1032px; width:1600px\" /></p>\r\n\r\n<p style=\"text-align:justify\">G&oacute;p phần v&agrave;o c&ocirc;ng cuộc chuyển đổi số ng&agrave;nh Y tế, Nền tảng hỗ trợ, tư vấn kh&aacute;m, chữa bệnh từ xa (Telehealth) được vinh danh Giải V&agrave;ng cho hệ thống c&oacute; gi&aacute; trị s&aacute;ng tạo nhất. Hệ thống được đ&aacute;nh gi&aacute; cao do sử dụng tr&iacute; tuệ Việt, tạo ra cuộc c&aacute;ch mạng mới trong ng&agrave;nh y tế, mang lại gi&aacute; trị cao cho cộng đồng, x&atilde; hội. Trước đ&oacute; Telehealth cũng đạt giải V&agrave;ng tại IT World Awards 2021 v&agrave; giải Nh&agrave; cung cấp của năm tại Real IT World 2021 bằng việc triển khai kết nối Telehealth tới hơn 1.000 cơ sở y tế trong thời gian kỉ lục chưa đến 45 ng&agrave;y.</p>\r\n\r\n<p style=\"text-align:center\"><img alt=\"Telehealth (2)-1\" src=\"https://solutions.viettel.vn/storage/tin-tuc/telehealth-2-1.JPG\" style=\"height:1010px; width:1600px\" /></p>\r\n\r\n<p style=\"text-align:justify\">Với mục ti&ecirc;u mỗi người d&acirc;n c&oacute; một trợ l&yacute; th&ocirc;ng minh về sức khỏe, Hệ sinh th&aacute;i Giải ph&aacute;p Y tế số đ&atilde; gi&agrave;nh Giải Bạc tại hạng mục Giải ph&aacute;p c&ocirc;ng nghệ chăm s&oacute;c sức khỏe. Hệ sinh th&aacute;i n&agrave;y được đ&aacute;nh gi&aacute; số 1 tại Việt Nam với 22 sản phẩm, dịch vụ đang triển khai th&agrave;nh c&ocirc;ng tại 4 lĩnh vực: Y tế dự ph&ograve;ng, Dược, An to&agrave;n thực phẩm, Quản l&yacute; h&agrave;nh ch&iacute;nh c&ocirc;ng; cung cấp dịch vụ cho gần 50.000 kh&aacute;ch h&agrave;ng l&agrave; c&aacute;c cơ sở y tế, hiệu thuốc, nh&agrave; thuốc, quầy thuốc, trung t&acirc;m ti&ecirc;m chủng tr&ecirc;n to&agrave;n quốc. Hệ sinh th&aacute;i y tế số Viettel Solutions gi&uacute;p thay đổi phương ph&aacute;p l&agrave;m việc của c&aacute;n bộ y tế sang m&ocirc;i trường số, đổi mới c&aacute;ch thức điều h&agrave;nh của l&atilde;nh đạo, hướng đến quản l&yacute; kh&ocirc;ng giấy tờ v&agrave; kh&ocirc;ng tiền mặt.</p>\r\n\r\n<p style=\"text-align:justify\">Ngo&agrave;i ra, Viettel Solutions gi&agrave;nh được 3 giải Đồng tại c&aacute;c hạng mục kh&aacute;c nhau, cụ thể: Cổng dịch vụ c&ocirc;ng trực tuyến v&agrave; Phần mềm một cửa điện tử - VPS Cloud tại hạng mục Giải ph&aacute;p C&ocirc;ng nghệ Kinh doanh; Nền tảng quản l&yacute; v&agrave; ph&acirc;n t&iacute;ch video th&ocirc;ng minh IVA (Intelligent Video Analytics) tại hạng mục Giải ph&aacute;p tr&iacute; tuệ nh&acirc;n tạo; v&agrave; Viettel Solutions tại hạng mục tổ chức hoạt động xuất sắc nhất năm.</p>\r\n\r\n<p style=\"text-align:justify\">Đặc biệt, Nền tảng quản l&yacute; v&agrave; ph&acirc;n t&iacute;ch video th&ocirc;ng minh IVA do c&aacute;c kỹ sư Viettel ph&aacute;t triển, s&aacute;nh ngang ti&ecirc;u chuẩn của c&aacute;c Tập đo&agrave;n c&ocirc;ng nghệ lớn tr&ecirc;n thế giới như Google Cloud, Azure Microsoft... Bằng việc t&iacute;ch hợp tr&iacute; tuệ nh&acirc;n tạo v&agrave;o xử l&yacute; h&igrave;nh ảnh, giải ph&aacute;p gi&uacute;p n&acirc;ng cao hiệu quả ph&acirc;n t&iacute;ch video th&ocirc;ng minh theo thời gian thực, r&uacute;t ngắn thời gian vận h&agrave;nh v&agrave; quản l&yacute; c&aacute;c m&ocirc; h&igrave;nh AI. Ngo&agrave;i ra, c&ocirc;ng nghệ nhận diện khu&ocirc;n mặt thuộc IVA l&agrave; giải ph&aacute;p đầu ti&ecirc;n của Việt Nam lọt v&agrave;o Top 30 trong b&agrave;i kiểm tra đo lường v&agrave; đ&aacute;nh gi&aacute; chất lượng to&agrave;n cầu kh&oacute; nhất của Viện Ti&ecirc;u chuẩn v&agrave; C&ocirc;ng nghệ quốc gia Mỹ (NIST).</p>\r\n\r\n<p style=\"text-align:justify\">Trong năm 2021, Tập đo&agrave;n Viettel gi&agrave;nh 22 giải tại IBA Stevie Awards, gấp 4,4 lần so với năm 2020, chiếm gần một nửa số giải m&agrave; 13 doanh nghiệp Việt Nam tham dự đạt được. Trong đ&oacute; Viettel Solutions l&agrave; đơn vị đạt hiệu quả nhất với c&aacute;c giải ph&aacute;p chuyển đổi số mang lại nhiều gi&aacute; trị cho cộng đồng, x&atilde; hội.</p>\r\n\r\n<p style=\"text-align:justify\"><em>Box:<br />\r\nGiải thưởng Kinh doanh Qu&ocirc;́c t&ecirc;́ (International Business Awards &ndash; Stevie Awards) là giải thưởng hàng đ&acirc;̀u th&ecirc;́ giới nhằm t&ocirc;n vinh thành tựu và những đóng góp tích cực của các doanh nghi&ecirc;̣p, cá nh&acirc;n tr&ecirc;n toàn c&acirc;̀u đ&ocirc;́i với lợi ích của c&ocirc;̣ng đ&ocirc;̀ng. Năm 2021, giải thưởng đ&oacute;n nhận hơn 3.700 hồ sơ đến từ 63 quốc gia v&agrave; v&ugrave;ng l&atilde;nh thổ; kết quả giải thưởng dựa tr&ecirc;n điểm số trung b&igrave;nh của hơn 260 CEO tr&ecirc;n to&agrave;n thế giới. Đ&acirc;y l&agrave; một trong những giải thưởng uy t&iacute;n v&agrave; danh gi&aacute; nhất hiện nay bởi mức độ chuy&ecirc;n m&ocirc;n, quy m&ocirc; tổ chức v&agrave; th&agrave;nh phần tham gia. Trọng t&acirc;m của giải thưởng quốc tế Stevie Awards nhằm hướng tới đổi mới, s&aacute;ng tạo, cải thiện kinh doanh.</em></p>', 'Nguyễn Tấn Phát', '2022-03-15', 1, 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `binhluan`
+--
+
+DROP TABLE IF EXISTS `binhluan`;
+CREATE TABLE IF NOT EXISTS `binhluan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `avatar_id` int(11) NOT NULL,
+  `hoten` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `noidung` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `baiviet_id` int(11) NOT NULL,
+  `trangthai` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `baiviet_id` (`baiviet_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `binhluan`
+--
+
+INSERT INTO `binhluan` (`id`, `avatar_id`, `hoten`, `noidung`, `baiviet_id`, `trangthai`) VALUES
+(1, 3, 'Nguyễn Tấn Phát', 'ádhshsnjs', 9, 1),
+(3, 7, 'DH20PM-CNTT', 'jhedjndm d', 9, 0),
+(4, 2, 'Nguyễn Tấn Phát', 'Bài viết khá hay. Tôi sẽ giới thiệu với bạn bè.', 11, 1),
+(5, 5, 'Trần Thị Hồng Ngọc', 'Bài viết rất hay và hữu ích.', 9, 1),
+(7, 1, 'Nguyễn Tấn Phát', '1234556', 9, 0),
+(8, 5, 'DH18SU-SUPHAM', 'jetjedj', 9, 0),
+(9, 3, 'Tạ Minh Tâm', 'Bài này rất hay sẽ giới thiệu tới bạn bè nhiều hơn.', 11, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cauhoi`
+--
+
+DROP TABLE IF EXISTS `cauhoi`;
+CREATE TABLE IF NOT EXISTS `cauhoi` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `hoten` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sdt` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diachi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cauhoi` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `traloi` longtext COLLATE utf8mb4_unicode_ci,
+  `trangthai` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `cauhoi`
+--
+
+INSERT INTO `cauhoi` (`id`, `hoten`, `sdt`, `diachi`, `email`, `cauhoi`, `traloi`, `trangthai`) VALUES
+(2, 'Nguyễn Tấn Phát', '0917663865', 'Long Xuyên', 'admin@gmail.com', 'Câu hỏi 001', '<p>Trả lơi 001</p>', 1),
+(3, 'Nguyễn Văn A', '0917663865', 'Thoại Sơn', 'nva@gmail.com', 'Phần mềm K12 thường bị treo khi đang sử dụng thì phải xử lý như thế nào ?', '<p>1. Tắt bớt c&aacute;c&nbsp;ứng dụng kh&ocirc;ng cần thiết</p>\r\n\r\n<p>2. Khởi&nbsp;động lại phần mềm</p>', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chitieu`
+--
+
+DROP TABLE IF EXISTS `chitieu`;
+CREATE TABLE IF NOT EXISTS `chitieu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `thang_id` int(11) NOT NULL,
+  `doanhthu_dichvu` int(11) NOT NULL,
+  `tytrong_dichvu` int(11) NOT NULL,
+  `doanhthu_tong` int(11) NOT NULL,
+  `tytrong_tong` int(11) NOT NULL,
+  `duan` int(11) NOT NULL,
+  `tytrong_duan` int(11) NOT NULL,
+  `kenhtruyen` int(11) NOT NULL,
+  `tytrong_kenhtruyen` int(11) NOT NULL,
+  `giaoduc` int(11) NOT NULL,
+  `tytrong_giaoduc` int(11) NOT NULL,
+  `yte` int(11) NOT NULL,
+  `tytrong_yte` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `thang` (`thang_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `chitieu`
+--
+
+INSERT INTO `chitieu` (`id`, `thang_id`, `doanhthu_dichvu`, `tytrong_dichvu`, `doanhthu_tong`, `tytrong_tong`, `duan`, `tytrong_duan`, `kenhtruyen`, `tytrong_kenhtruyen`, `giaoduc`, `tytrong_giaoduc`, `yte`, `tytrong_yte`) VALUES
+(1, 3, 20, 5, 100, 10, 700, 10, 4000, 10, 900, 5, 300, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chucvu`
+--
+
+DROP TABLE IF EXISTS `chucvu`;
+CREATE TABLE IF NOT EXISTS `chucvu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tenchucvu` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `permissions` text COLLATE utf8mb4_vietnamese_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+--
+-- Dumping data for table `chucvu`
+--
+
+INSERT INTO `chucvu` (`id`, `tenchucvu`, `permissions`) VALUES
+(1, 'Quản lý', NULL),
+(3, 'Nhân viên', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chuongtrinh`
+--
+
+DROP TABLE IF EXISTS `chuongtrinh`;
+CREATE TABLE IF NOT EXISTS `chuongtrinh` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `thang_id` int(11) NOT NULL,
+  `ten_chuongtrinh` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kehoach` int(11) NOT NULL,
+  `tytrong` int(11) NOT NULL,
+  `thuchien` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `thang_id` (`thang_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `chuongtrinh`
+--
+
+INSERT INTO `chuongtrinh` (`id`, `thang_id`, `ten_chuongtrinh`, `kehoach`, `tytrong`, `thuchien`) VALUES
+(1, 3, 'Chương trình EduOne', 500, 10, 200),
+(2, 3, 'Chương trình mảng y tế', 900, 10, 0),
+(3, 3, 'Thu cước kênh truyền', 120, 5, 0),
+(4, 3, 'Phát triển thuê bao kênh truyền', 30, 5, 0),
+(5, 3, 'Chuyển đổi thuê bao Edu.One sử dụng dịch vụ qua app', 31, 5, 31),
+(6, 3, 'Phát triển Doanh thu Y tế từ sản phẩm dịch vụ mới Y tế học đường', 1, 5, 10);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dacdiem`
+--
+
+DROP TABLE IF EXISTS `dacdiem`;
+CREATE TABLE IF NOT EXISTS `dacdiem` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tendacdiem` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `chitiet` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sanpham_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sanpham_id` (`sanpham_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `dacdiem`
+--
+
+INSERT INTO `dacdiem` (`id`, `tendacdiem`, `chitiet`, `sanpham_id`) VALUES
+(11, 'ĐẦY ĐỦ, TOÀN TRÌNH, ĐÁP ỨNG QUY CHUẨN', '<p>C&oacute; đầy đủ t&iacute;nh năng của một hệ thống quản l&yacute; học tập trực tuyến v&agrave; kiểm tra, đ&aacute;nh gi&aacute; trực tuyến cho mọi đối tượng, từ c&aacute;n bộ quản l&yacute; đến gi&aacute;o vi&ecirc;n, học sinh. Hệ thống được thiết kế dựa tr&ecirc;n c&aacute;c định hướng v&agrave; y&ecirc;u cầu, ti&ecirc;u chuẩn của Ch&iacute;nh phủ v&agrave; Bộ Gi&aacute;o dục đ&agrave;o tạo quy định, ban h&agrave;nh.</p>', 222),
+(12, 'CÔNG NGHỆ TIÊN TIẾN, LIÊN TỤC CẬP NHẬP', '<p>Hệ thống được x&acirc;y dựng với c&ocirc;ng nghệ hiện đại nhất, gi&uacute;p tối ưu trong qu&aacute; tr&igrave;nh sử dụng v&agrave; bảo mật th&ocirc;ng tin. Viettel ph&aacute;t triển v&agrave; cải tiến li&ecirc;n tục, đảm bảo đ&aacute;p ứng c&aacute;c y&ecirc;u cầu thay đổi v&agrave; xu hướng ph&aacute;t triển của ng&agrave;nh gi&aacute;o dục.</p>', 222),
+(13, 'TÍNH HỆ THỐNG', '<p>Cung cấp t&iacute;nh năng quản trị theo m&ocirc; h&igrave;nh quản l&yacute; ph&acirc;n cấp r&otilde; r&agrave;ng, đồng bộ dữ liệu với c&aacute;c hệ thống kh&aacute;c trong c&ugrave;ng hệ sinh th&aacute;i như: SMAS, Cơ sở dữ liệu ng&agrave;nh...</p>', 222),
+(14, 'CÔNG CỤ TƯƠNG TÁC ĐA CHIỀU', 'Cung cấp tính năng quản trị theo mô hình quản lý phCơ quan quản lý có thể tương tác với người dùng\nHọc viên vừa học vừa tương tác với giáo viên và bạn bè\nChia sẻ tài nguyên không giới hạn\nHọc theo hướng dẫn của giáo viên hoặc của hệ thống sau khi kiểm traân cấp rõ ràng, đồng bộ dữ liệu với các hệ thống khác trong cùng hệ sinh thái như: SMAS, Cơ sở dữ liệu ngành...', 223),
+(15, 'AN TOÀN HƠN CÁC TRANG MẠNG XÃ HỘI', 'Tài khoản định danh người dùng theo dữ liệu từ cơ sở dữ liệu tập trung của ngành giáo dục.\nTài khoản tự đăng ký bị hạn chế quyền.\nHệ thống tự tạo nhóm theo đơn vị trường học nên cơ quan quản lý dễ dàng theo dõi và điều hành.', 223),
+(16, 'NỘI DUNG ĐA DẠNG, DỄ DÀNG MUA BÁN', 'Nội dung đa dạng từ nhiều nguồn: cơ quan quản lý, trung tâm, nhà cung cấp nội dung, giáo viên.\nGiáo viên có thể tự tạo nội dung có phí hoặc miễn phí, tự quảng bá, thu hút người đọc', 223),
+(17, 'CÔNG NGHỆ', 'Ứng dụng công nghệ: AI, Big Data; Blockchain; IoT…', 224),
+(18, 'AN TOÀN', 'Đảm bảo tính an toàn dữ liệu cao nhất', 224),
+(19, 'GIẢI PHÁP', 'Đa dạng bộ giải pháp cho phòng hội chẩn/ phòng khám/ phòng họp/…. ', 224),
+(20, 'MÔ HÌNH TRIỂN KHAI', 'Triển khai trên nền tảng Cloud, triển khai nhanh chóng, cài đặt và vận hành đơn giản, tập trung', 224),
+(21, 'KINH NGHIỆM', 'Viettel đã triển khai kết nối ~2.500 cơ sở y tế toàn quốc', 224),
+(22, 'CÔNG NGHỆ', 'Ứng dụng trí tuệ nhân tạo (AI), các công nghệ phân tích dữ liệu lớn phục vụ nghiên cứu và xây dựng các ứng dụng CNTT y tế.', 225),
+(23, 'BẢO MẬT', 'Hệ thống được tích hợp bảo mật hạ tầng, ứng dụng, dữ liệu nhiều lớp, phân quyền chặt chẽ tránh lộ lọt thông tin.', 225),
+(24, 'TRIỂN KHAI', 'Triển khai cài đặt đơn giản, nhanh chóng; Giao diện thân thiện, dễ sử dụng.', 225);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `danhmuc`
+--
+
+DROP TABLE IF EXISTS `danhmuc`;
+CREATE TABLE IF NOT EXISTS `danhmuc` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tendanhmuc` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `linhvuc_id` int(11) NOT NULL,
+  `avatar` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `anhbia` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `chitiet` longtext COLLATE utf8mb4_vietnamese_ci,
+  `link_video` varchar(255) COLLATE utf8mb4_vietnamese_ci DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+--
+-- Dumping data for table `danhmuc`
+--
+
+INSERT INTO `danhmuc` (`id`, `tendanhmuc`, `linhvuc_id`, `avatar`, `anhbia`, `chitiet`, `link_video`, `slug`) VALUES
+(30, 'Giáo dục số', 0, '1645584087-daidien.jpg', '1645584292-anhbia.png', '<p style=\"text-align:justify\">Với t&acirc;m niệm &ldquo;Đầu tư cho gi&aacute;o dục l&agrave; đầu tư cho tương lai đất nước&rdquo;, trong 15 năm vừa qua Viettel đ&atilde; đồng h&agrave;nh c&ugrave;ng Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo đẩy mạnh ứng dụng c&ocirc;ng nghệ th&ocirc;ng tin - viễn th&ocirc;ng, nhằm n&acirc;ng cao chất lượng gi&aacute;o dục, đổi mới to&agrave;n diện từ cấp trung ương đến địa phương. Th&uacute;c đẩy chuyển đổi số ng&agrave;nh gi&aacute;o dục l&agrave; con đường gi&uacute;p Viettel thực hiện kh&aacute;t vọng x&acirc;y dựng một x&atilde; hội học tập trọn đời, x&oacute;a nh&ograve;a khoảng c&aacute;ch gi&aacute;o dục giữa c&aacute;c địa phương tr&ecirc;n cả nước.</p>', '7rv19BfGNsc', 'giao-duc-so'),
+(31, 'Y tế số', 0, '1645583940-daidien.jpg', '1645584015-anhbia.png', '<p>Với sứ mệnh cung cấp giải ph&aacute;p v&igrave; con người, Viettel x&acirc;y dựng hệ sinh th&aacute;i giải ph&aacute;p C&ocirc;ng nghệ th&ocirc;ng tin v&agrave; Viễn th&ocirc;ng, đồng h&agrave;nh c&ugrave;ng ng&agrave;nh Y tế v&igrave; một Việt Nam khỏe mạnh hơn. Ch&uacute;ng t&ocirc;i cung cấp c&aacute;c giải ph&aacute;p số h&oacute;a, tự động h&oacute;a, th&ocirc;ng minh h&oacute;a với mục ti&ecirc;u chuyển đổi số ng&agrave;nh Y tế, n&acirc;ng cao chất lượng dịch vụ y tế v&agrave; bảo vệ, chăm s&oacute;c v&agrave; n&acirc;ng cao sức khoẻ nh&acirc;n d&acirc;n. Ch&uacute;ng t&ocirc;i hướng tới tầm nh&igrave;n, mỗi người d&acirc;n sẽ c&oacute; một trợ l&yacute; sức khỏe th&ocirc;ng minh, c&aacute;c cơ sở y tế kh&ocirc;ng phim, c&aacute;c cơ quan quản l&yacute; kh&ocirc;ng c&ograve;n b&aacute;o c&aacute;o giấy, số liệu y tế trực tuyến theo thời gian thực mọi l&uacute;c mọi nơi, t&agrave;i ch&iacute;nh y tế minh bạch, 100% thủ tục h&agrave;nh ch&iacute;nh c&ocirc;ng y tế đạt cấp độ 4.</p>', 'jCzNgU9KP4I', 'y-te-so'),
+(32, 'Chính phủ số', 0, '1645584317-daidien.jpg', '1645584317-anhbia.png', NULL, 'mlntQ5P1oWo', 'chinh-phu-so'),
+(33, 'Doanh nghiệp số', 0, '1645584658-daidien.jpg', '1645584658-anhbia.png', NULL, '9Vts-ZpBy4c', 'doanh-nghiep-so'),
+(34, 'Giao thông số', 0, '1645584574-daidien.jpg', '1645584574-anhbia.png', NULL, 'MZfW_74j3U0', 'giao-thong-so'),
+(35, 'Công nghệ thông tin', 1, '', '', '', '', 'cong-nghe-thong-tin'),
+(36, 'Hạ tầng số', 1, '', '', '', '', 'ha-tang-so'),
+(37, 'An ninh bảo mật', 1, '', '', '', '', 'an-ninh-bao-mat'),
+(38, 'Viễn thông', 1, '', '', '', '', 'vien-thong');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dauan`
+--
+
+DROP TABLE IF EXISTS `dauan`;
+CREATE TABLE IF NOT EXISTS `dauan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nam` int(11) NOT NULL,
+  `noidung` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `dauan`
+--
+
+INSERT INTO `dauan` (`id`, `nam`, `noidung`, `avatar`) VALUES
+(2, 2010, '<p>Miễn ph&iacute; kết nối internet tới gần 29.000 trường học, cơ sở gi&aacute;o dục tại Việt Nam, chiếm 72% số trường tr&ecirc;n to&agrave;n quốc.</p>', '1646466869-dauan.jpg'),
+(3, 2011, '<p>Khai trương trung t&acirc;m dữ liệu (IDC) lớn nhất Việt Nam, sở hữu đường trục c&aacute;p quang lớn nhất Việt Nam, đồng sở hữu tuyến c&aacute;p quang biển APG.</p>', '1646466946-dauan.jpg'),
+(4, 2013, '<p>Trở th&agrave;nh doanh nghiệp viễn th&ocirc;ng - CNTT lớn nhất Việt Nam.</p>', '1646467229-dauan.jpg'),
+(5, 2014, '<p>Khai trương giải ph&aacute;p cổng th&ocirc;ng tin một cửa quốc gia về hải quan.</p>', '1646467270-dauan.jpg'),
+(6, 2016, '<p>Triển khai hệ thống hồ sơ sức khỏe c&aacute; nh&acirc;n.</p>', '1646467295-dauan.jpg'),
+(7, 2017, '<p>Khai trương Hệ Thống th&ocirc;ng tin ti&ecirc;m chủng quốc gia.</p>', '1646467328-dauan.jpg'),
+(8, 2018, '<p>Ch&iacute;nh thức th&agrave;nh lập TCT GPDN Viettel, ch&iacute;nh thức kết nối mạng cơ sở cung ứng thuốc to&agrave;n quốc, trở th&agrave;nh th&agrave;nh vi&ecirc;n ch&iacute;nh thức của Ủy ban quốc gia về Ch&iacute;nh phủ điện tử</p>', '1646467368-dauan.jpg'),
+(9, 2019, '<p>Viettel l&agrave; nh&agrave; mạng đầu ti&ecirc;n triển khai hạ tầng 5G tại Việt Nam<br />\r\nKhai trương hệ thống th&ocirc;ng tin phục vụ họp v&agrave; xử l&yacute; c&ocirc;ng việc của ch&iacute;nh phủ (e-cabinet)<br />\r\nKhai trương trung t&acirc;m điều h&agrave;nh th&agrave;nh phố th&ocirc;ng minh tại c&aacute;c tỉnh/th&agrave;nh phố (Huế, Ph&uacute; Thọ)</p>', '1646467400-dauan.jpg'),
+(10, 2020, '<p>Ra mắt nền tảng kh&aacute;m chữa bệnh từ xa TELEHEALTH v&agrave; kh&aacute;nh th&agrave;nh kết nối 1000 cơ sở kh&aacute;m chữa bệnh từ xa TELEHEALTH v&agrave; c&aacute;c giải ph&aacute;p CNTT chuyển đổi số ng&agrave;nh y tế<br />\r\nnhư: C&ocirc;ng khai y tế, mạng kết nối y tế Việt Nam, hồ sơ sức khoẻ c&aacute; nh&acirc;n.<br />\r\nK&iacute; kết 15 tỉnh th&agrave;nh phố triển khai Th&agrave;nh phố th&ocirc;ng minh. Luỹ kế 23 tỉnh th&agrave;nh phố tr&ecirc;n cả nước<br />\r\nX&acirc;y dựng v&agrave; triển khai nền tảng triển l&atilde;m ảo 3D lần đầu ti&ecirc;n tại Việt Nam tại triển l&atilde;m v&agrave; hội nghị Thế Giới Số cấp bộ trưởng ITU VIRTUAL DIGITAL WORLD 2020 v&agrave; khai<br />\r\ntrường kh&ocirc;ng gian s&aacute;ng tạo v&agrave; trải nghiệm chuyển đổi số Tp. Hồ Ch&iacute; Minh</p>', '1646467435-dauan.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doanhnghiep`
+--
+
+DROP TABLE IF EXISTS `doanhnghiep`;
+CREATE TABLE IF NOT EXISTS `doanhnghiep` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ten_kh` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `loai_kh` int(11) NOT NULL,
+  `hinhanh` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+--
+-- Dumping data for table `doanhnghiep`
+--
+
+INSERT INTO `doanhnghiep` (`id`, `ten_kh`, `loai_kh`, `hinhanh`) VALUES
+(8, 'Vietnam Airline', 0, '1646049682-doanhnghiep.png'),
+(10, 'Bộ Y tế', 1, '1646050535-doanhnghiep.png'),
+(11, 'Ngân hàng BIDV', 0, '1646049655-doanhnghiep.png'),
+(12, 'Ngân hàng Vietcombank', 0, '1646049720-doanhnghiep.png'),
+(13, 'Điện lực', 0, '1646049737-doanhnghiep.png'),
+(14, 'Ngân hàng MB Bank', 0, '1646049776-doanhnghiep.png'),
+(15, 'Tập đoàn VinGroup', 0, '1646049802-doanhnghiep.png'),
+(16, 'Uỷ ban nhân dân Quản lý nhà nước tại Doanh nghiệp', 0, '1646049870-doanhnghiep.png'),
+(17, 'Samsung', 0, '1646049912-doanhnghiep.png'),
+(18, 'FLC Group', 0, '1646049946-doanhnghiep.png'),
+(19, 'Bộ Giáo dục và Đào tạo', 1, '1646050319-doanhnghiep.png'),
+(20, 'Văn phòng Quốc hội', 1, '1646050368-doanhnghiep.png'),
+(21, 'Bộ Quốc phòng', 1, '1646050405-doanhnghiep.png'),
+(22, 'Văn phòng Chính phủ', 1, '1646050439-doanhnghiep.png'),
+(23, 'Bộ Thông tin và Truyền thông', 1, '1646050578-doanhnghiep.png'),
+(24, 'Bộ Tư pháp', 1, '1646050605-doanhnghiep.png'),
+(25, 'Bộ Công an', 1, '1646050625-doanhnghiep.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `giaithuong`
+--
+
+DROP TABLE IF EXISTS `giaithuong`;
+CREATE TABLE IF NOT EXISTS `giaithuong` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ten_giaithuong` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phanloai_id` int(11) NOT NULL,
+  `nam` int(11) NOT NULL,
+  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `chitiet` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `giaithuong`
+--
+
+INSERT INTO `giaithuong` (`id`, `ten_giaithuong`, `phanloai_id`, `nam`, `avatar`, `chitiet`) VALUES
+(2, 'GIẢI THƯỞNG CNTT THẾ GIỚI - IT WORLD AWARDS 2021', 1, 2021, '1646206255-giaithuong.png', '<p style=\"text-align:justify\">Chiến dịch PR 1000 điểm Teleheath - Giải V&agrave;ng hạng mục &ldquo;Chiến dịch PR, truyền th&ocirc;ng của năm&rdquo; (Communications or PR Campaign of the Year)</p>'),
+(3, 'GIẢI THƯỞNG CNTT THẾ GIỚI - IT WORLD AWARDS 2021', 2, 2021, 'no2-159x214.png', '<p style=\"text-align:justify\">Hệ sinh th&aacute;i Giải ph&aacute;p Y tế số 2.0 - Giải Bạc hạng mục &ldquo;Sản phẩm dịch vụ C&ocirc;ng nghệ th&ocirc;ng tin cho lĩnh vực Y tế tốt nhất&rdquo; (IT Products &amp; Services for Healthcare)</p>'),
+(4, 'REAL IT AWARDS', 1, 2021, 'no1-159x214.png', '<p style=\"text-align:justify\">Hạng mục &quot;Nh&agrave; cung cấp của năm&rdquo; với những nỗ lực triển khai giải ph&aacute;p hỗ trợ, tư vấn kh&aacute;m chữa bệnh từ xa (Telehealth)</p>'),
+(5, 'GIẢI THƯỞNG CNTT THẾ GIỚI - IT WORLD AWARDS 2021', 1, 2021, 'no1-159x214.png', '<p style=\"text-align:justify\">Dự &aacute;n Teleheath - Giải V&agrave;ng hạng mục &ldquo;Sản phẩm giải ph&aacute;p Cải tiến Y tế v&agrave; Chăm s&oacute;c Sức khỏe tốt nhất&rdquo; (Best Health Care and Medical Innovation)</p>'),
+(6, 'GIẢI THƯỞNG SAO KHUÊ', 0, 2021, '1646209520-giaithuong.jpg', '<p>89 giải thưởng</p>'),
+(7, 'GIẢI THƯỞNG KINH DOANH QUỐC TẾ - IBA STEVIE AWARDS', 1, 2021, 'no1-159x214.png', '<p style=\"text-align:justify\">Sản phẩm Viettel Teleheath - Giải V&agrave;ng Most Valuable Technical Innovation</p>'),
+(8, 'GIẢI THƯỞNG KINH DOANH QUỐC TẾ - IBA STEVIE AWARDS', 2, 2021, 'no2-159x214.png', '<p style=\"text-align:justify\">Sản phẩm Digital Health Ecosystem - Giải Bạc HealthCare Technology Solution</p>'),
+(9, 'GIẢI THƯỞNG KINH DOANH QUỐC TẾ - IBA STEVIE AWARDS', 3, 2021, 'no3-159x214.png', '<p style=\"text-align:justify\">Giải Đồng Company of the year - Diversified service</p>'),
+(10, 'GIẢI THƯỞNG KINH DOANH QUỐC TẾ - IBA STEVIE AWARDS', 3, 2021, 'no3-159x214.png', '<p style=\"text-align:justify\">Viettel IVA&amp;VMS - Giải Đồng AI/Machine Learning Solutions</p>'),
+(11, 'GIẢI THƯỞNG KINH DOANH QUỐC TẾ - IBA STEVIE AWARDS', 3, 2021, 'no3-159x214.png', '<p style=\"text-align:justify\">Sản phẩm VPS Cloud - Giải Đồng Business Technology Solutions</p>'),
+(12, 'GIẢI THƯỞNG CHÌA KHÓA VÀNG', 0, 2021, '1646223471-giaithuong.jpg', '<p>Hạng mục Giải ph&aacute;p h&oacute;a đơn điện tử an to&agrave;n</p>'),
+(13, 'GIẢI THƯỞNG FORBES VIETNAM', 0, 2021, '1646223512-giaithuong.jpg', '<p style=\"text-align:justify\">Top 50 thương hiệu gi&aacute; trị nhất Việt Nam 2020 Top 500 Doanh nghiệp lợi nhuận tốt nhất: 3 đề cử nằm trong Top500 trong đ&oacute; Tập đo&agrave;n Viettel xếp vị tr&iacute; thứ 3 Top 500 doanh nghiệp tăng trưởng nhanh nhất Việt Nam</p>'),
+(14, 'GIẢI THƯỞNG THÀNH PHỐ THÔNG MINH VN', 0, 2021, '1646223559-giaithuong.jpg', '<p>2 giải thưởng</p>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `giaoviec`
+--
+
+DROP TABLE IF EXISTS `giaoviec`;
+CREATE TABLE IF NOT EXISTS `giaoviec` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ten_congviec` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nguoinhan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hanchot` date NOT NULL,
+  `ngaynop` datetime DEFAULT NULL,
+  `trangthai` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `giaoviec`
+--
+
+INSERT INTO `giaoviec` (`id`, `ten_congviec`, `nguoinhan`, `hanchot`, `ngaynop`, `trangthai`) VALUES
+(5, 'Đề xuất tháng 03', '1', '2022-03-15', NULL, 0),
+(6, 'Báo cáo công việc tháng 02', '2', '2022-03-09', '2022-03-10 20:30:15', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gioithieu`
+--
+
+DROP TABLE IF EXISTS `gioithieu`;
+CREATE TABLE IF NOT EXISTS `gioithieu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `noidung` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tram_hatang` int(11) NOT NULL,
+  `trungtam` int(11) NOT NULL,
+  `capquang` int(11) NOT NULL,
+  `diem_giaodich` int(11) NOT NULL,
+  `dieuhanh` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diem_giaonhan` int(11) NOT NULL,
+  `canbo_nhanvien` int(11) NOT NULL,
+  `chuyengia` int(11) NOT NULL,
+  `giatri` int(11) NOT NULL,
+  `chamsoc` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `gioithieu`
+--
+
+INSERT INTO `gioithieu` (`id`, `noidung`, `tram_hatang`, `trungtam`, `capquang`, `diem_giaodich`, `dieuhanh`, `diem_giaonhan`, `canbo_nhanvien`, `chuyengia`, `giatri`, `chamsoc`) VALUES
+(1, '<p style=\"text-align:justify\">L&agrave; một th&agrave;nh vi&ecirc;n của Tập đo&agrave;n C&ocirc;ng nghiệp &ndash; Viễn th&ocirc;ng Qu&acirc;n đội, được th&agrave;nh lập với sứ mệnh &ldquo;Ti&ecirc;n phong, đồng h&agrave;nh với Ch&iacute;nh phủ, doanh nghiệp, cộng đồng để giải quyết những vấn đề của x&atilde; hội, đất nước&rdquo;. Tổng C&ocirc;ng ty l&agrave; đơn vị ti&ecirc;n phong của Viettel trong c&ocirc;ng cuộc chuyển đổi số, đ&oacute;ng vai tr&ograve; chủ lực, thực hiện sứ mệnh ti&ecirc;n phong kiến tạo x&atilde; hội số của Tập đo&agrave;n. Với mục ti&ecirc;u trở th&agrave;nh doanh nghiệp số 1 Việt Nam về tư vấn v&agrave; triển khai chuyển đổi số, ch&uacute;ng t&ocirc;i hợp t&aacute;c c&ugrave;ng c&aacute;c tổ chức, doanh nghiệp v&agrave; người d&acirc;n để mang lại cuộc sống tốt đẹp hơn cho mọi người.</p>', 128000, 5, 500000, 110000, '24/07', 8000, 3000, 300, 9, '24/7 TẠI 63 TỈNH THÀNH VIỆT NAM  VÀ 10 THỊ TRƯỜNG NƯỚC NGOÀI');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gioitinh`
+--
+
+DROP TABLE IF EXISTS `gioitinh`;
+CREATE TABLE IF NOT EXISTS `gioitinh` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `gioitinh` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `gioitinh`
+--
+
+INSERT INTO `gioitinh` (`id`, `gioitinh`) VALUES
+(0, 'Nam'),
+(1, 'Nữ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lienhe`
+--
+
+DROP TABLE IF EXISTS `lienhe`;
+CREATE TABLE IF NOT EXISTS `lienhe` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ten_hethong` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diachi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sdt` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `map` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `logo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fanpage` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `zalo` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `facebook` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mess` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `lienhe`
+--
+
+INSERT INTO `lienhe` (`id`, `ten_hethong`, `email`, `diachi`, `sdt`, `map`, `logo`, `fanpage`, `zalo`, `facebook`, `mess`) VALUES
+(1, 'VIETTEL SOLUTION', 'ntphat_shop@gmail.com', '170 Thoại Ngọc Hầu, Mỹ Long, Thành phố Long Xuyên, An Giang', '0385111603', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d981.1294705524285!2d105.4436970291864!3d10.380379618692324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310a72fc9d52bcef%3A0x93f20b7a2d1307ad!2zMTcwIFRob-G6oWkgTmfhu41jIEjhuqd1LCBN4bu5IExvbmcsIFRow6BuaCBwaOG7kSBMb25nIFh1ecOqbiwgQW4gR2lhbmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1641528697703!5m2!1svi!2s\" width=\"100%\" height=\"410\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>', '1646116179-logo.png', '<script async defer crossorigin=\"anonymous\" src=\"https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0\" nonce=\"OQFjB90s\"></script>\r\n<div class=\"fb-page\" data-href=\"https://www.facebook.com/viettelangiang\" data-tabs=\"events\" data-width=\"500\" data-height=\"\" data-small-header=\"false\" data-adapt-container-width=\"true\" data-hide-cover=\"false\" data-show-facepile=\"true\"><blockquote cite=\"https://www.facebook.com/viettelangiang\" class=\"fb-xfbml-parse-ignore\"><a href=\"https://www.facebook.com/viettelangiang\">Viettel An Giang</a></blockquote></div>', '<div class=\"zalo-chat-widget\" data-oaid=\"3623842424356090488\" data-welcome-message=\"Shop rất vui khi được hỗ trợ bạn!\" data-autopopup=\"0\" data-width=\"300\" data-height=\"200\"></div>\r\n<script src=\"https://sp.zalo.me/plugins/sdk.js\"></script>', 'https://www.facebook.com/shopaontp/', '<!-- Messenger Plugin chat Code -->\r\n    <div id=\"fb-root\"></div>\r\n\r\n    <!-- Your Plugin chat code -->\r\n    <div id=\"fb-customer-chat\" class=\"fb-customerchat\">\r\n    </div>\r\n\r\n    <script>\r\n      var chatbox = document.getElementById(\'fb-customer-chat\');\r\n      chatbox.setAttribute(\"page_id\", \"101749822473730\");\r\n      chatbox.setAttribute(\"attribution\", \"biz_inbox\");\r\n    </script>\r\n\r\n    <!-- Your SDK code -->\r\n    <script>\r\n      window.fbAsyncInit = function() {\r\n        FB.init({\r\n          xfbml            : true,\r\n          version          : \'v13.0\'\r\n        });\r\n      };\r\n\r\n      (function(d, s, id) {\r\n        var js, fjs = d.getElementsByTagName(s)[0];\r\n        if (d.getElementById(id)) return;\r\n        js = d.createElement(s); js.id = id;\r\n        js.src = \'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js\';\r\n        fjs.parentNode.insertBefore(js, fjs);\r\n      }(document, \'script\', \'facebook-jssdk\'));\r\n    </script>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `loiich`
+--
+
+DROP TABLE IF EXISTS `loiich`;
+CREATE TABLE IF NOT EXISTS `loiich` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tenloiich` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `chitiet` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sanpham_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sanpham_id` (`sanpham_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `loiich`
+--
+
+INSERT INTO `loiich` (`id`, `tenloiich`, `chitiet`, `sanpham_id`) VALUES
+(5, 'ĐỐI VỚI GIÁO VIÊN', '<ul>\r\n	<li>Tạo b&agrave;i giảng trực tuyến với nhiều định dạng kh&aacute;c nhau: video; text; t&agrave;i liệu; b&agrave;i tập; scorm...</li>\r\n	<li>Tạo b&agrave;i kiểm tra, b&agrave;i thi với nhiều dạng c&acirc;u hỏi v&agrave; c&agrave;i đặt tiện &iacute;ch</li>\r\n	<li>Khởi tạo, tổ chức lớp học ảo một c&aacute;ch đơn giản.</li>\r\n	<li>C&oacute; m&ocirc;i trường để trao đổi, thảo luận, tương t&aacute;c trực tuyến với học sinh.</li>\r\n	<li>Hỗ trợ gi&aacute;o vi&ecirc;n theo d&otilde;i, thống k&ecirc;, b&aacute;o c&aacute;o kết quả, t&igrave;nh h&igrave;nh học tập của học sinh.</li>\r\n	<li>Quản l&yacute; v&agrave; lưu trữ kế hoạch b&agrave;i dạy một c&aacute;ch tiện lợi, dễ d&agrave;ng.</li>\r\n	<li>Tham gia c&aacute;c cuộc họp trực tuyến do nh&agrave; trường tổ chức.</li>\r\n</ul>', 222),
+(6, 'ĐỐI VỚI HỌC SINH', '<ul>\r\n	<li>Hiển thị thời kh&oacute;a biểu ri&ecirc;ng theo từng c&aacute; nh&acirc;n để học sinh chủ động theo d&otilde;i, nắm bắt kế hoạch học tập</li>\r\n	<li>Học v&agrave; l&agrave;m b&agrave;i tập, b&agrave;i kiểm tra trực tuyến tr&ecirc;n hệ thống mọi l&uacute;c, mọi nơi, tr&ecirc;n mọi nền tảng: m&aacute;y t&iacute;nh, điện thoại th&ocirc;ng minh hoặc m&aacute;y t&iacute;nh bảng</li>\r\n	<li>C&oacute; m&ocirc;i trường để thảo luận trực tuyến với gi&aacute;o vi&ecirc;n v&agrave; c&aacute;c học sinh kh&aacute;c</li>\r\n	<li>Chủ động theo d&otilde;i được lịch sử học tập v&agrave; kết quả học tập của m&igrave;nh.</li>\r\n</ul>', 222),
+(7, 'ĐỐI VỚI NHÀ TRƯỜNG', '<ul>\r\n	<li>X&acirc;y dựng v&agrave; quản l&yacute; kho học liệu chung của đơn vị</li>\r\n	<li>X&acirc;y dựng v&agrave; quản l&yacute; NHCH, kỳ thi, đề thi chung của đơn vị&nbsp;</li>\r\n	<li>Kiểm duyệt kế hoạch b&agrave;i dạy (gi&aacute;o &aacute;n) một c&aacute;ch tiện lợi, dễ &nbsp;d&agrave;ng</li>\r\n	<li>Kiểm duyệt nội dung do gi&aacute;o vi&ecirc;n đưa l&ecirc;n&nbsp;</li>\r\n	<li>Theo d&otilde;i t&igrave;nh h&igrave;nh dạy học của của gi&aacute;o vi&ecirc;n v&agrave; học sinh&nbsp;</li>\r\n	<li>Chủ động thiết lập c&aacute;c th&ocirc;ng số hệ thống như thời gian học; giao diện hệ &nbsp;thống</li>\r\n</ul>', 222),
+(8, 'ĐỐI VỚI SỞ/PHÒNG GIÁO DỤC ĐÀO TẠO', '<ul>\r\n	<li>Tổ chức c&aacute;c cuộc thi, đ&aacute;nh gi&aacute; cấp Sở/Ph&ograve;ng cho học sinh&nbsp;</li>\r\n	<li>Tổ chức họp trực tuyến với cấp trường v&agrave; gi&aacute;o vi&ecirc;n&nbsp;</li>\r\n	<li>Tổ chức v&agrave; quản l&yacute; kho học liệu cấp Sở/Ph&ograve;ng&nbsp;</li>\r\n	<li>C&oacute; c&ocirc;ng cụ để điều h&agrave;nh hoạt động dạy học trực tuyến của c&aacute;c đơn vị&nbsp;</li>\r\n	<li>B&aacute;o c&aacute;o, tổng hợp đ&aacute;nh gi&aacute; hoạt động dạy học trực tuyến của c&aacute;c đơn vị.&nbsp;</li>\r\n</ul>', 222),
+(9, 'ĐỐI VỚI CƠ QUAN QUẢN LÝ GIÁO DỤC', '<ul>\r\n	<li>L&agrave; c&ocirc;ng cụ truyền th&ocirc;ng về c&aacute;c định hướng chuy&ecirc;n m&ocirc;n của Sở đến cấp dưới</li>\r\n	<li>C&oacute; thể tương t&aacute;c v&agrave; thường xuy&ecirc;n c&oacute; c&aacute;c th&ocirc;ng tin từ &nbsp;cộng đồng gi&aacute;o dục trong tỉnh</li>\r\n	<li>C&ocirc;ng cụ gi&uacute;p cho ng&agrave;nh gi&aacute;o dục đưa ra c&aacute;c kết quả minh bạch hơn về chất lượng gi&aacute;o vi&ecirc;n, học sinh</li>\r\n	<li>Giảm vấn nạn dạy th&ecirc;m, học th&ecirc;m</li>\r\n</ul>', 223),
+(10, 'ĐỐI VỚI GIÁO VIÊN', '<ul>\r\n	<li>Gi&uacute;p giảm bớt những c&ocirc;ng việc thủ c&ocirc;ng như trộn đề, chấm b&agrave;i, chữa b&agrave;i...</li>\r\n	<li>N&acirc;ng cao chuy&ecirc;n m&ocirc;n cho gi&aacute;o vi&ecirc;n</li>\r\n	<li>Hiểu r&otilde; t&igrave;nh h&igrave;nh học tập của học sinh v&agrave; c&oacute; kế hoạch bổ trợ hoặc n&acirc;ng cao ri&ecirc;ng.</li>\r\n	<li>C&oacute; m&ocirc;i trường tương t&aacute;c đa chiều</li>\r\n</ul>', 223),
+(11, 'ĐỐI VỚI HỌC SINH', '<ul>\r\n	<li>Tạo th&oacute;i quen tự học</li>\r\n	<li>C&oacute; m&ocirc;i trường tương t&aacute;c với gi&aacute;o vi&ecirc;n, c&aacute;c bạn kh&aacute;c khi cần sự trợ gi&uacute;p</li>\r\n	<li>Biết c&aacute;ch khai th&aacute;c c&aacute;c kiến thức tr&ecirc;n mạng</li>\r\n	<li>Tự kiểm tra kiến thức v&agrave; được chỉ dẫn học phần kiến thức c&ograve;n hổng</li>\r\n</ul>', 223),
+(12, 'ĐỐI VỚI PHỤ HUYNH', '<ul>\r\n	<li>C&oacute; m&ocirc;i trường th&acirc;n thiện để tương t&aacute;c với gi&aacute;o vi&ecirc;n khi cần sự trợ gi&uacute;p</li>\r\n	<li>Hiểu v&agrave; đồng cảm với ng&agrave;nh gi&aacute;o dục</li>\r\n	<li>Hiểu được lực học của con, c&oacute; kế hoạch học tập c&ugrave;ng con</li>\r\n</ul>', 223),
+(13, 'ĐỐI VỚI CƠ SỞ Y TẾ', '<ul>\r\n	<li>Giảm tải cho bệnh viện tuyến tr&ecirc;n, n&acirc;ng cao chất lượng dịch vụ kh&aacute;m chữa bệnh.</li>\r\n	<li>Thuận tiện trong c&ocirc;ng t&aacute;c đ&agrave;o tạo chuy&ecirc;n m&ocirc;n cho tuyến dưới.</li>\r\n	<li>Tiết kiệm c&aacute;c chi ph&iacute; đ&agrave;o tạo, chi ph&iacute; in v&agrave; lưu trữ phim cho BHYT khi chẩn đo&aacute;n h&igrave;nh ảnh từ xa.</li>\r\n	<li>N&acirc;ng cao năng lực cho tuyến dưới khi được thực h&agrave;nh, hội chẩn c&ugrave;ng tuyến tr&ecirc;n.&nbsp;</li>\r\n	<li>Tr&aacute;nh l&acirc;y nhiễm khi tụ tập qu&aacute; đ&ocirc;ng người trong giai đoạn dịch bệnh, giảm c&aacute;c chi ph&iacute; ph&ograve;ng chống, điều trị dịch bệnh. G&oacute;p phần tạo ra mạng lưới y khoa, mở rộng hợp t&aacute;c nghi&ecirc;n cứu khoa học.</li>\r\n</ul>', 224),
+(14, 'ĐỐI VỚI NGƯỜI DÂN', '<ul>\r\n	<li>Người d&acirc;n c&oacute; thể kết nối đến b&aacute;c sĩ tại c&aacute;c bệnh viện tuyến tr&ecirc;n 24/7 ngay khi c&oacute; nhu cầu.&nbsp;</li>\r\n	<li>Với những ca bệnh kh&oacute;, phức tạp, người bệnh tại tuyến dưới được tư vấn v&agrave; hội chẩn bởi c&aacute;c b&aacute;c sĩ c&oacute; tr&igrave;nh độ cao tại tuyến tr&ecirc;n.&nbsp;</li>\r\n	<li>Tiết kiệm chi ph&iacute; đi lại, chi ph&iacute; kh&aacute;m bệnh trực tiếp tại tuyến tr&ecirc;n cho người bệnh.</li>\r\n	<li>Giảm thời gian chờ đợi cho bệnh nh&acirc;n trong qu&aacute; tr&igrave;nh kh&aacute;m chữa bệnh.</li>\r\n	<li>C&oacute; thể quản l&yacute; hồ sơ sức khỏe, bệnh &aacute;n điện tử, tra cứu v&agrave; t&igrave;m kiếm b&aacute;c sĩ, đ&aacute;nh gi&aacute; b&aacute;c sĩ, tương t&aacute;c với những người c&ugrave;ng bệnh.</li>\r\n</ul>', 224),
+(15, 'NGƯỜI DÂN', '<ul>\r\n	<li>Chủ động&nbsp;quản l&yacute; th&ocirc;ng tin sức khỏe của bản th&acirc;n v&agrave;&nbsp;ph&ograve;ng bệnh, chăm s&oacute;c sức khỏe.</li>\r\n	<li>Cung cấp th&ocirc;ng tin sức khỏe của người bệnh cho c&aacute;c cơ sở kh&aacute;m chữa bệnh, tạo thuận lợi cho việc chẩn đo&aacute;n v&agrave; điều trị gi&uacute;p họ được chăm s&oacute;c sức khỏe to&agrave;n diện như:&nbsp;ph&aacute;t hiện&nbsp;sớm, điều trị kịp thời, giảm chi ph&iacute; kh&aacute;m chữa bệnh của mỗi người d&acirc;n.</li>\r\n	<li>Cho ph&eacute;p người d&acirc;n c&oacute; thể chia sẻ th&ocirc;ng tin điện tử về sức khỏe của m&igrave;nh tại bất kỳ cơ sở kh&aacute;m&nbsp;chữa bệnh n&agrave;o tr&ecirc;n cả nước.&nbsp;</li>\r\n</ul>', 225),
+(16, 'CƠ SỞ KHÁM, CHỮA BỆNH', '<ul>\r\n	<li>C&aacute;c cơ sở kh&aacute;m, chữa bệnh c&oacute; thể tra cứu th&ocirc;ng tin lịch sử sức khỏe người d&acirc;n đến kh&aacute;m chữa bệnh theo quy định.</li>\r\n	<li>Cập nhật th&ocirc;ng tin kh&aacute;m, chữa bệnh v&agrave;o hệ thống hồ sơ sức khỏe điện tử quốc gia sau mỗi đợt điều trị hoặc theo quy chế hồ sơ sức khỏe điện tử.</li>\r\n	<li>Hồ sơ sức khỏe điện tử cung cấp đầy đủ c&aacute;c th&ocirc;ng tin về bệnh tật, tiền sử bệnh tật, c&aacute;c yếu tố nguy cơ ảnh hưởng đến sức khỏe.</li>\r\n</ul>', 225),
+(17, 'CƠ QUAN QUẢN LÝ', '<ul>\r\n	<li>Đối với Bộ Y tế v&agrave; c&aacute;c Sở Y tế: Việc triển khai hồ sơ sức khỏe điện tử gi&uacute;p cho ng&agrave;nh c&oacute; cơ sở&nbsp;dữ liệu về sức khỏe của người d&acirc;n đầy đủ, ch&iacute;nh x&aacute;c v&agrave; kịp thời để ph&acirc;n t&iacute;ch đ&aacute;nh gi&aacute; nhằm gi&uacute;p&nbsp;ng&agrave;nh y tế c&oacute; c&aacute;c chỉ đạo kịp thời về ph&ograve;ng chống dịch bệnh&nbsp;v&agrave; c&oacute; được c&aacute;c dự b&aacute;o, hoạch định ch&iacute;nh s&aacute;ch về c&ocirc;ng t&aacute;c bảo vệ, chăm s&oacute;c v&agrave; n&acirc;ng cao sức khỏe người d&acirc;n.</li>\r\n	<li>Cơ sở dữ liệu l&agrave; nền tảng&nbsp;ph&aacute;t triển c&aacute;c ứng dụng th&ocirc;ng minh phục vụ chăm s&oacute;c sức khỏe.</li>\r\n</ul>', 225),
+(18, 'CƠ QUAN BẢO HIỂM XÃ HỘI', '<ul>\r\n	<li>Việc chẩn đo&aacute;n, điều trị bệnh sớm hơn&nbsp;sẽ l&agrave;m giảm chi ph&iacute; Kh&aacute;m chữa bệnh (KCB)&nbsp;BHYT.</li>\r\n	<li>Khi th&ocirc;ng tin người bệnh th&ocirc;ng suốt, việc quản l&yacute; chi ph&iacute; KCB BHYT dễ d&agrave;ng hơn g&oacute;p phần hạn chế việc lạm dụng kỹ thuật cao</li>\r\n</ul>', 225),
+(19, 'ĐƠN VỊ, CÁ NHÂN NGHIÊN CỨU Y KHOA', '<ul>\r\n	<li>Cung cấp nguồn dữ liệu lớn hỗ trợ tốt trong c&aacute;c nghi&ecirc;n cứu l&acirc;m s&agrave;ng</li>\r\n	<li>Ứng dụng AI, c&aacute;c c&ocirc;ng nghệ ph&acirc;n t&iacute;ch dữ liệu lớn phục vụ nghi&ecirc;n cứu v&agrave; x&acirc;y dựng c&aacute;c ứng dụng CNTT y tế như: hệ thống hỗ trợ ra quyết định l&acirc;m s&agrave;ng dựa tr&ecirc;n bằng chứng; tri thức y khoa; gi&aacute;m s&aacute;t &amp; theo d&otilde;i t&igrave;nh h&igrave;nh dịch bệnh;...</li>\r\n</ul>', 225),
+(38, 'KÊNH THÔNG TIN CHÍNH THỐNG', '<p>Cung cấp c&aacute;c k&ecirc;nh th&ocirc;ng tin ch&iacute;nh thống để quảng b&aacute; v&agrave; ph&aacute;t triển du lịch.</p>', 227),
+(39, 'VỚI KHÁCH DU LỊCH', '<p>Dễ d&agrave;ng t&igrave;m kiếm đầy đủ th&ocirc;ng tin du lịch, qua đ&oacute; c&oacute; thể x&acirc;y dựng cho m&igrave;nh một lịch tr&igrave;nh tham quan, du lịch tại đ&acirc;y.</p>', 227),
+(40, 'VỚI ĐƠN VỊ CHỦ QUẢN', '<p style=\"text-align:justify\">Hỗ trợ nắm bắt nhu cầu của kh&aacute;ch du lịch đối với từng sản phẩm du lịch của địa phương, từ đ&oacute; c&oacute; chiến lược ph&aacute;t triển hợp l&yacute; đối với từng loại h&igrave;nh sản phẩm th&ocirc;ng qua cơ sở dữ liệu được h&igrave;nh th&agrave;nh qua qu&aacute; tr&igrave;nh kh&aacute;ch du lịch x&acirc;y dựng kế hoạch chuyến đi.</p>', 227),
+(41, 'VỚI CƠ QUAN NHÀ NƯỚC', '<ul>\r\n	<li>Nắm bắt th&ocirc;ng tin du kh&aacute;ch, h&agrave;nh vi ti&ecirc;u d&ugrave;ng để c&oacute; ch&iacute;nh s&aacute;ch quảng b&aacute;, x&uacute;c tiến</li>\r\n	<li>Quản l&yacute; thuế, tăng thu ng&acirc;n s&aacute;ch nh&agrave; nước</li>\r\n	<li>Kiểm so&aacute;t th&ocirc;ng tin dịch vụ du lịch trong địa b&agrave;n</li>\r\n	<li>Hỗ trợ du kh&aacute;ch thuận tiện khi sử dụng c&aacute;c dịch vụ du lịch</li>\r\n</ul>', 226),
+(42, 'VỚI NHÀ CUNG CẤP DỊCH VỤ', '<ul>\r\n	<li>Gia tăng doanh thu</li>\r\n	<li>Th&ecirc;m K&ecirc;nh quảng b&aacute; ch&iacute;nh thống tới du kh&aacute;ch</li>\r\n	<li>Quản l&yacute; được số lượng du kh&aacute;ch. Tương t&aacute;c tốt hơn với kh&aacute;ch h&agrave;ng</li>\r\n</ul>', 226),
+(43, 'VỚI KHÁCH DU LỊCH', '<ul>\r\n	<li>Thanh to&aacute;n từ v&iacute; điện tử m&agrave; kh&ocirc;ng cần tiền mặt</li>\r\n	<li>Tạo t&agrave;i khoản nhanh ch&oacute;ng, cho ph&eacute;p nạp v&agrave; r&uacute;t tiền thuận tiện</li>\r\n	<li>Thanh to&aacute;n được hưởng ưu đ&atilde;i</li>\r\n	<li>Tiếp cận th&ocirc;ng tin du lịch ch&iacute;nh thống một c&aacute;ch r&otilde; r&agrave;ng. Đặt book dịch vụ trực tiếp</li>\r\n	<li>Chia sẻ, trao đổi th&ocirc;ng tin, tương t&aacute;c MXH</li>\r\n</ul>', 226);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mangluoi`
+--
+
+DROP TABLE IF EXISTS `mangluoi`;
+CREATE TABLE IF NOT EXISTS `mangluoi` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ten_mangluoi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `mangluoi`
+--
+
+INSERT INTO `mangluoi` (`id`, `ten_mangluoi`, `link`, `avatar`) VALUES
+(2, 'VIETTEL - VIỆT NAM', 'https://viettel.com.vn/vi/', '1646189790-mangluoi.png'),
+(3, 'METFONE', 'https://www.metfone.com.kh/en', '1646189846-mangluoi.png'),
+(4, 'UNITEL', 'https://unitel.com.la/', '1646189870-mangluoi.png'),
+(5, 'NATCOM', 'https://natcom.com.ht/', '1646189929-mangluoi.png'),
+(6, 'TELEMOR', 'http://www.telemor.tl/', '1646189951-mangluoi.png'),
+(7, 'BITEL', 'https://www.bitel.com.pe/', '1646189971-mangluoi.png'),
+(8, 'NEXTEL', 'http://www.nexttel.com/', '1646190000-mangluoi.png'),
+(9, 'LUMITEL', 'https://www.lumitel.bi/', '1646190021-mangluoi.png'),
+(10, 'HALOTEL', 'http://www.halotel.co.tz/', '1646190038-mangluoi.png'),
+(11, 'MYTEL', 'https://www.mytel.com.mm/', '1646190055-mangluoi.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu`
+--
+
+DROP TABLE IF EXISTS `menu`;
+CREATE TABLE IF NOT EXISTS `menu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tenmenu` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `route` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `menu`
+--
+
+INSERT INTO `menu` (`id`, `tenmenu`, `link`, `route`) VALUES
+(1, 'Trang chủ', 'home', '{{route(\'home.home\')}}'),
+(2, 'Hướng dẫn', '#nhap', 'Không có'),
+(3, 'Danh mục', '#', 'Không có'),
+(4, 'Đăng nhập', 'dangnhap', '{{route(\'home.getdangnhap\')}}'),
+(5, 'Logout', 'dangxuat', '{{route(\'home.dangxuat\')}}'),
+(6, 'Thông tin khách hàng', '#', 'Không có'),
+(7, 'Đơn hàng', '#', 'Không có'),
+(8, 'Tìm kiếm', '#', 'Không có'),
+(9, 'Liên hệ', 'lienhe', '{{route(\'home.lienhe\')}}'),
+(10, 'Tạp chí', '#', 'Không có'),
+(11, 'Bài viết', 'baiviet', '{{route(\'home.baiviet\')}}'),
+(12, 'Video', 'video', '{{route(\'home.video\')}}');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `migrations`
+--
+
+DROP TABLE IF EXISTS `migrations`;
+CREATE TABLE IF NOT EXISTS `migrations` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nhanvien`
+--
+
+DROP TABLE IF EXISTS `nhanvien`;
+CREATE TABLE IF NOT EXISTS `nhanvien` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `hovaten` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `gioitinh_id` int(11) NOT NULL,
+  `ngaysinh` date NOT NULL,
+  `diachi` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `sdt` varchar(10) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `cmnd` varchar(12) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `chucvu_id` int(11) NOT NULL,
+  `tendangnhap` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `trangthai` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `chucvu_id` (`chucvu_id`),
+  KEY `gioitinh_id` (`gioitinh_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+--
+-- Dumping data for table `nhanvien`
+--
+
+INSERT INTO `nhanvien` (`id`, `hovaten`, `gioitinh_id`, `ngaysinh`, `diachi`, `sdt`, `cmnd`, `chucvu_id`, `tendangnhap`, `password`, `email`, `trangthai`) VALUES
+(1, 'Nguyễn Hoàng Tùng', 0, '1985-01-01', '18 Ung Văn Khiêm, Mỹ Xuyên, Thành phố Long Xuyên, An Giang', '0123456789', '56414441', 1, 'ql_nhtung', '$2y$10$TOpSMrZuLfQYXDmqMErHdO0RZgphyJUUTAv2edO35Uaq60NKtp2kW', 'ql_nhtung@gmail.com', 0),
+(2, 'Nguyễn Tấn Phát', 0, '2000-03-16', 'An Giang', '0917663865', '46566', 1, 'ql_ntphat', '$2y$10$rsy44jthiRZbXm.8uSMDjOtoJyV58jrWZaXfjVyO5je0cIdIPwbtG', 'ql_ntphat@gmail.com', 0),
+(3, 'Huỳnh Quốc Minh', 0, '2000-03-16', 'An Giang', '0385111603', '46566', 3, 'nv_hqminh', '$2y$10$T44ErlgZUtVyBn82fO9BEeTchcDt1Ult1ej37XP58CKaw3MNGMdvK', 'nv_hqminh@gmail.com', 0),
+(4, 'Nguyễn Hồng Thụy', 1, '1999-10-24', 'Long Xuyên', '038511160', '123456789', 3, 'nv_nhthuy', '$2y$10$x321iNBgnpIfFR.825A5uObQwK.YdyC1oePZW4AeLLqxwqAkOGI6C', 'nv_nhthuy@gmail.com', 0),
+(5, 'Nguyễn Thị Thu', 1, '1998-05-14', 'Thoại Sơn', '09999999', '46566', 3, 'nv_ntthu', '$2y$10$f9UTyRq0YW8IO1oShUix.eixKsfbHr2QGq3EqHlMfuW7Spl3WMmmW', 'nv_ntthu@gmail.com', 0),
+(6, 'Nguyễn Thị Thu Hồng', 1, '1898-12-24', 'Thoại Sơn', '09999999', '46566', 3, 'nv_ntthong', '$2y$10$b5jD1p8MVzKQhB3lbbXxoufw/uYkgXYl0dmsGRhO.Spzjvi1WI5lG', 'nv_ntthong@gmail.com', 0),
+(9, 'Trần Trung Quốc', 0, '1975-12-18', '170 Thoại Ngọc Hầu, Mỹ Long, Thành phố Long Xuyên, An Giang', '0123456789', '123456789', 1, 'ql_ttquoc', '$2y$10$kmN60qv9qQP13tW6UqGZpeukatgyuLfSTpGBEKMmeSwpAghGjMAj.', 'ql_ttquoc@gmail.com', 1),
+(10, 'Dương Hoàng Nam Khoa', 0, '1998-01-12', 'Long Xuyên, An Giang', '0782665143', '123789456082', 3, 'dhnkhoa', '$2y$10$sXQDfrMAKQUnf4QkKuP8i.geI0IERC0AxpJc2g88GD4LVCsTIJNVu', 'dhnkhoa@gmail.com', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nop_cv`
+--
+
+DROP TABLE IF EXISTS `nop_cv`;
+CREATE TABLE IF NOT EXISTS `nop_cv` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `congviec_id` int(11) NOT NULL,
+  `file` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `thoigian_nop` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `congviec_id` (`congviec_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `nop_cv`
+--
+
+INSERT INTO `nop_cv` (`id`, `congviec_id`, `file`, `thoigian_nop`) VALUES
+(9, 6, '1646644221-file_nop.xlsx', '2022-03-07 16:10:21'),
+(10, 6, '1646893241-file_nop.pdf', '2022-03-10 13:20:41');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sanpham`
+--
+
+DROP TABLE IF EXISTS `sanpham`;
+CREATE TABLE IF NOT EXISTS `sanpham` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tensp` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `anh` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `anh1` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `danhmuc_id` int(11) NOT NULL,
+  `chitiet` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `link` varchar(100) COLLATE utf8mb4_vietnamese_ci DEFAULT NULL,
+  `link_pdf` varchar(255) COLLATE utf8mb4_vietnamese_ci DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `danhmuc_id` (`danhmuc_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=228 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+--
+-- Dumping data for table `sanpham`
+--
+
+INSERT INTO `sanpham` (`id`, `tensp`, `anh`, `anh1`, `danhmuc_id`, `chitiet`, `slug`, `link`, `link_pdf`) VALUES
+(222, 'HỆ THỐNG QUẢN LÝ VÀ THI HỌC TRỰC TUYẾN (K12Online)', '1647161569-sanpham.png', '1645606253-sanpham_chitiet.jpg', 30, '<p style=\"text-align:justify\">Hệ thống Quản l&yacute; học v&agrave; thi trực tuyến K12Online l&agrave; hệ thống hỗ trợ to&agrave;n tr&igrave;nh c&ocirc;ng t&aacute;c quản l&yacute; đ&agrave;o tạo, hỗ trợ dạy - học v&agrave; đ&aacute;nh gi&aacute;, kiểm tra trực tuyến, d&agrave;nh ri&ecirc;ng &nbsp;cho c&aacute;c đơn vị gi&aacute;o dục phổ th&ocirc;ng, gi&aacute;o dục thường xuy&ecirc;n.</p>', 'he - thong - quan - ly - va - thi - hoc - truc - tuyen - k12online', '7UBxjDZzabo', 'https://drive.google.com/file/d/1D9hpQqwp39uyAhfKPowZW3cdrf1ZY1LX'),
+(223, 'MẠNG XÃ HỘI HỌC TẬP TRỰC TUYẾN (ViettelStudy)', '1647086814-sanpham.jpg', '1645606253-sanpham_chitiet.jpg', 30, '<p style=\"text-align:justify\">ViettelSudy l&agrave; nền tảng c&ocirc;ng nghệ kết hợp ba trong một: Mạng x&atilde; hội định danh, hệ thống quản trị đ&agrave;o tạo v&agrave; s&agrave;n thương mại điện tử. ViettelStudy gi&uacute;p c&aacute;c đơn vị quản l&yacute; gi&aacute;o dục, đơn vị cung cấp nội dung, gi&aacute;o vi&ecirc;n kết nối, hỗ trợ hoặc cung cấp dịch vụ gi&aacute;o dục tới học sinh v&agrave; phụ huynh.</p>', 'mang - xa - hoi - hoc - tap - truc - tuyen - viettelstudy', '8cojVWOgQYs', 'https://drive.google.com/file/d/1ug_eGWqJwCfTkrlaGV3DR4FPKox2-hgf'),
+(224, 'NỀN TẢNG HỖ TRỢ, TƯ VẤN KHÁM CHỮA BỆNH TỪ XA (Viettel Telehealth)', '1647089270-sanpham.png', '1647089270-sanpham_chitiet.jpg', 31, '<p>Nền tảng Hỗ trợ tư vấn kh&aacute;m, chữa bệnh từ xa (Viettel Telehealth) l&agrave; bộ giải ph&aacute;p CNTT v&agrave; viễn th&ocirc;ng gi&uacute;p kết nối c&aacute;c cơ sở y tế tuyến tr&ecirc;n v&agrave; tuyến dưới để tư vấn chẩn đo&aacute;n h&igrave;nh ảnh, giải phẫu bệnh, hỗ trợ phẫu thuật, chuyển giao kỹ thuật, đ&agrave;o tạo&hellip;từ xa. Kết hợp với c&aacute;c phần mềm tư vấn người bệnh từ xa, đặt kh&aacute;m online, mạng x&atilde; hội b&aacute;c sĩ, đ&agrave;o tạo trực tuyến, giải ph&aacute;p hội nghị truyền h&igrave;nh, quản l&yacute; v&agrave; chia sẻ h&igrave;nh ảnh y tế, k&yacute; số, k&ecirc;nh truyền&hellip;để tạo th&agrave;nh hệ sinh th&aacute;i tổng thể.</p>', 'nen-tang-ho-tro-tu-van-kham-chua-benh-tu-xa-viettel-telehealth', 'lcm7BmO2iP8', ''),
+(225, 'HỆ THỐNG HỒ SƠ SỨC KHỎE ĐIỆN TỬ (vEHR)', '1647089535-sanpham.png', '1647089535-sanpham_chitiet.png', 31, '<p style=\"text-align:justify\">Hệ&nbsp; thống Hồ&nbsp; sơ&nbsp; sức khỏe điện tử (vEHR) l&agrave; bản tin học h&oacute;a của hồ sơ sức khỏe được lập, hiển thị, cập nhật, lưu trữ v&agrave; chia sẻ bằng phương tiện điện tử.</p>\r\n\r\n<p style=\"text-align:justify\">Mỗi người d&acirc;n c&oacute; một hồ sơ sức khỏe (HSSK) điện tử&nbsp; được theo d&otilde;i v&agrave; lưu trữ suốt đời; hồ sơ sức khỏe điện tử được bảo mật, chỉ&nbsp; c&oacute; những người c&oacute; li&ecirc;n quan được tiếp cận th&ocirc;ng tin; người d&acirc;n c&oacute; quyền quyết định chia sẻ hay kh&ocirc;ng chia sẻ c&aacute;c th&ocirc;ng tin c&aacute; nh&acirc;n trong hồ sơ sức khỏe.</p>', 'he-thong-ho-so-suc-khoe-dien-tu-vehr', 'QsQLclYQevU', ''),
+(226, 'THẺ DU LỊCH THÔNG MINH (Viettel Travel eCard)', '1647221576-sanpham.jpg', '1647221576-sanpham_chitiet.jpg', 32, '<p style=\"text-align:justify\">Giải ph&aacute;p cho ph&eacute;p c&aacute;c địa phương quản l&yacute; Thẻ du lịch theo 02 h&igrave;nh thức: thẻ cứng v&agrave; thẻ mềm (ứng dụng thẻ du lịch th&ocirc;ng minh).</p>\r\n\r\n<p style=\"text-align:justify\">► Ứng dụng di động cho du kh&aacute;ch t&igrave;m kiếm th&ocirc;ng tin, chia sẻ trải nghiệm du lịch, thanh to&aacute;n dịch vụ du lịch</p>\r\n\r\n<p style=\"text-align:justify\">► Ứng dụng quản l&yacute; cho Doanh nghiệp cung cấp dịch vụ du lịch quản l&yacute; th&ocirc;ng tin sản phẩm, kh&aacute;ch h&agrave;ng, doanh thu</p>\r\n\r\n<p style=\"text-align:justify\">► Ứng dụng quản l&yacute; cho Sở du lịch kiểm so&aacute;t được CSDL Du kh&aacute;ch, DN du lịch, Sản phẩm dịch vụ du lịch trong địa b&agrave;n</p>', 'the-du-lich-thong-minh-viettel-travel-ecard', '', ''),
+(227, 'CỔNG THÔNG TIN DU LỊCH', '1647221747-sanpham.jpg', '1647221747-sanpham_chitiet.jpg', 32, '<p style=\"text-align:justify\">L&agrave; điểm truy cập duy nhất cho du kh&aacute;ch, c&ocirc;ng ty du lịch, nh&agrave; h&agrave;ng, kh&aacute;ch sạn, nh&agrave; nghỉ v&agrave; c&aacute;c cơ quan &nbsp;h&agrave;nh ch&iacute;nh tr&ecirc;n m&ocirc;i trường mạng. Sản phẩm li&ecirc;n kết, t&iacute;ch hợp c&aacute;c k&ecirc;nh th&ocirc;ng tin, c&aacute;c dịch vụ v&agrave; ứng dụng nhằm gi&uacute;p người d&ugrave;ng c&oacute; thể khai th&aacute;c, sử dụng v&agrave; c&aacute; nh&acirc;n h&oacute;a việc hiển thị th&ocirc;ng tin.</p>', 'cong-thong-tin-du-lich', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `slider`
+--
+
+DROP TABLE IF EXISTS `slider`;
+CREATE TABLE IF NOT EXISTS `slider` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ten_slider` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `trangthai` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `slider`
+--
+
+INSERT INTO `slider` (`id`, `ten_slider`, `avatar`, `trangthai`) VALUES
+(3, 'Slider_001', '1646046056-slider.png', 1),
+(4, 'Slider_002', '1646046069-slider.png', 1),
+(5, 'Slider_003', '1646046081-slider.png', 1),
+(6, 'Slider_004', '1646046097-slider.png', 1),
+(7, 'Slider_005', '1645673733-slider.png', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tailieu`
+--
+
+DROP TABLE IF EXISTS `tailieu`;
+CREATE TABLE IF NOT EXISTS `tailieu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ten_tailieu` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `loai_file` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tailieu`
+--
+
+INSERT INTO `tailieu` (`id`, `ten_tailieu`, `file`, `loai_file`) VALUES
+(2, 'CẤU HÌNH TỔNG ĐÀI KHÁCH HÀNG SỬ DÙNG ĐƯỜNG FTTH', '1647670915-tailieu.pdf', 1),
+(3, 'CẤU HÌNH TỔNG ĐÀI KHÁCH HÀNG VỚI ĐƯỜNG TRUYỀN OFFICEWAN', '1647309243-tailieu.pdf', 1),
+(4, 'Cấu hình thông tin trên tổng đài khách hàng dịch vụ Mobile SIP Trunk', '1647309273-tailieu.pdf', 1),
+(5, 'Sip Trunk', '1647309310-tailieu.pdf', 1),
+(6, 'PHIẾU YÊU CẦU ĐĂNG KÝ DỊCH VỤ CHUYỂN VÙNG QUỐC TẾ CHO THUÊ BAO DI ĐỘNG SỬ DỤNG GÓI CƯỚC BASIC_LITE', '1647309407-tailieu.doc', 2),
+(7, 'Thông báo đăng ký hợp đồng', '1647346600-tailieu.pdf', 1),
+(8, 'Biên bản huỷ thanh lý hợp đồng leasedline-internet', '1647346635-tailieu.docx', 2),
+(9, 'Biên bản huỷ thanh lý hợp đồng kênh truyền', '1647346719-tailieu.docx', 2),
+(10, 'PHIẾU YÊU CẦU THAY ĐỔI DỊCH VỤ LEASEDLINE INTERNET', '1647346762-tailieu.doc', 2),
+(11, 'PHIẾU YÊU CẦU THAY ĐỔI DỊCH VỤ KÊNH TRUYỀN', '1647346807-tailieu.doc', 2),
+(12, 'PHIẾU YÊU CẦU CUNG CẤP DỊCH VỤ LEASEDLINE INTERNET', '1647346839-tailieu.docx', 2),
+(13, 'PHIẾU YÊU CẦU CUNG CẤP DỊCH VỤ KÊNH TRUYỀN', '1647346870-tailieu.docx', 2),
+(14, 'CAM KẾT CHẤT LƯỢNG DỊCH VỤ', '1647346927-tailieu.doc', 2),
+(15, 'ĐIỀU KHOẢN CHUNG CỦA HỢP ĐỒNG CUNG CẤP VÀ SỬ DỤNG DỊCH VỤ', '1647346958-tailieu.docx', 2),
+(16, 'HỢP ĐỒNG CUNG CẤP VÀ SỬ DỤNG DỊCH VỤ', '1647346998-tailieu.doc', 2),
+(17, 'DỊCH VỤ SAO LƯU MÁY CHỦ ĐIỆN TOÁN ĐÁM MÂY', '1647397769-tailieu.pdf', 1),
+(18, 'Content Delivery Network', '1647397825-tailieu.pdf', 1),
+(19, 'BỘ DỊCH VỤ SAO LƯU DỰ PHÒNG DỮ LIỆU DÀNH CHO DOANH NGHIỆP', '1647398138-tailieu.pdf', 1),
+(20, 'GIỚI THIỆU GIẢI PHÁP QUẢN LÝ BÁN HÀNG  TRỰC TUYẾN (DMS.ONE)', '1647398337-tailieu.docx', 2),
+(21, 'QUY TRÌNH TIẾP NHẬN VÀ GIẢI QUYẾT KHIẾU NẠI CỦA KHÁCH HÀNG', '1647398361-tailieu.pdf', 1),
+(22, 'Shop.ONE - Bán hàng chuyên nghiệp', '1647398450-tailieu.pdf', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `thang`
+--
+
+DROP TABLE IF EXISTS `thang`;
+CREATE TABLE IF NOT EXISTS `thang` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tenthang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `thang`
+--
+
+INSERT INTO `thang` (`id`, `tenthang`) VALUES
+(1, 'Tháng 01'),
+(2, 'Tháng 02'),
+(3, 'Tháng 03'),
+(4, 'Tháng 04'),
+(5, 'Tháng 05'),
+(6, 'Tháng 06'),
+(7, 'Tháng 07'),
+(8, 'Tháng 08'),
+(9, 'Tháng 09'),
+(10, 'Tháng 10'),
+(11, 'Tháng 11'),
+(12, 'Tháng 12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `thongtin`
+--
+
+DROP TABLE IF EXISTS `thongtin`;
+CREATE TABLE IF NOT EXISTS `thongtin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `hoten` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sdt` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diachi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hinhthuc` int(11) NOT NULL,
+  `sanpham_id` int(11) NOT NULL,
+  `yeucau_id` int(11) NOT NULL,
+  `trangthai` int(11) NOT NULL DEFAULT '0',
+  `noidung` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sanpham_id` (`sanpham_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `thongtin`
+--
+
+INSERT INTO `thongtin` (`id`, `hoten`, `sdt`, `email`, `diachi`, `hinhthuc`, `sanpham_id`, `yeucau_id`, `trangthai`, `noidung`) VALUES
+(1, 'Nguyễn Tấn Phát', '0917663865', 'admin@gmail.com', '170 Thoại Ngọc Hầu, Mỹ Long, Thành phố Long Xuyên, An Giang', 0, 222, 0, 1, 'sacvqgqabqaeg'),
+(9, 'Nguyễn Văn A', '0385111603', 'ntphat@gmail.com', '170 Thoại Ngọc Hầu, Mỹ Long, Thành phố Long Xuyên, An Giang', 2, 222, 1, 0, 'Tôi muốn tư vấn kỹ hơn về sản phẩm này'),
+(10, 'CD44SM-DLICH', '0917663865', 'admin@gmail.com', '170 Thoại Ngọc Hầu, Mỹ Long, Thành phố Long Xuyên, An Giang', 2, 222, 1, 0, 'dgwgghsh'),
+(11, 'Trần Thị Tuyết Hồng', '0789445261', 'ttthong@gmail.com', 'An Giang', 0, 227, 1, 0, 'Yêu cầu tư vấn');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `thuchien_chitieu`
+--
+
+DROP TABLE IF EXISTS `thuchien_chitieu`;
+CREATE TABLE IF NOT EXISTS `thuchien_chitieu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `chitieu_id` int(11) NOT NULL,
+  `doanhthu_dichvu` int(11) NOT NULL,
+  `doanhthu_tong` int(11) NOT NULL,
+  `duan` int(11) NOT NULL,
+  `kenhtruyen` int(11) NOT NULL,
+  `giaoduc` int(11) NOT NULL,
+  `yte` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `chitieu_id` (`chitieu_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `thuchien_chitieu`
+--
+
+INSERT INTO `thuchien_chitieu` (`id`, `chitieu_id`, `doanhthu_dichvu`, `doanhthu_tong`, `duan`, `kenhtruyen`, `giaoduc`, `yte`) VALUES
+(3, 1, 542, 753, 118, 779, 856, 200);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tinhnang`
+--
+
+DROP TABLE IF EXISTS `tinhnang`;
+CREATE TABLE IF NOT EXISTS `tinhnang` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tentinhnang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `chitiet` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sanpham_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sanpham_id` (`sanpham_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tinhnang`
+--
+
+INSERT INTO `tinhnang` (`id`, `tentinhnang`, `chitiet`, `sanpham_id`) VALUES
+(8, 'QUẢN LÝ ĐÀO TẠO', '<p>- Quản l&yacute; t&agrave;i khoản B&aacute;o c&aacute;o thống k&ecirc;</p>\r\n\r\n<p>- Tổ chức họp trực tuyến</p>', 222),
+(9, 'TỔ CHỨC DẠY - HỌC TRỰC TUYẾN', '<p>- Tổ chức dạy học dưới nhiều h&igrave;nh thức: lớp học ảo, học qua video, slide... v&agrave; học tập tr&ecirc;n mọi thiết bị.</p>\r\n\r\n<p>- Tổ chức khảo th&iacute; theo cả h&igrave;nh thức trực tiếp v&agrave; trực tuyến.</p>\r\n\r\n<p>- X&acirc;y dựng ng&acirc;n h&agrave;ng c&acirc;u hỏi, xếp thời kh&oacute;a biểu, ph&acirc;n c&ocirc;ng giảng dạy.</p>', 222),
+(10, 'TÍNH NĂNG KHÁC', '<p>- Thảo luận, trao đổi dễ d&agrave;ng giữa gi&aacute;o vi&ecirc;n, học sinh.</p>\r\n\r\n<p>- Cung cấp c&aacute;c đấu trường tri thức cho học sinh.</p>', 222),
+(11, 'HỌC - THI TRỰC TUYẾN', '<ul>\r\n	<li>Cho ph&eacute;p người d&ugrave;ng th&ecirc;m, xem, sửa, x&oacute;a kh&oacute;a học, chuy&ecirc;n đề, t&agrave;i liệu...</li>\r\n	<li>Cho ph&eacute;p người d&ugrave;ng th&ecirc;m, xem, sửa, x&oacute;a ng&acirc;n h&agrave;ng c&acirc;u hỏi.</li>\r\n	<li>Cho ph&eacute;p người d&ugrave;ng th&ecirc;m, xem, sửa, x&oacute;a kỳ thi, đề thi</li>\r\n	<li>Cho ph&eacute;p người d&ugrave;ng tra cứu to&agrave;n bộ c&aacute;c th&ocirc;ng tin cần thiết như: kh&oacute;a học, chuy&ecirc;n đề, b&agrave;i học, kỳ thi...</li>\r\n</ul>', 223),
+(12, 'MẠNG XÃ HỘI HỌC TẬP', '<p>- Tham gia những tr&ograve; chơi tri thức trong qu&aacute; tr&igrave;nh sử dụng</p>\r\n\r\n<p>- Người d&ugrave;ng c&oacute; thể theo d&otilde;i, kết bạn, nhắn tin với người kh&aacute;c, đăng b&agrave;i, chia sẻ, lưu trữ học liệu trong qu&aacute; tr&igrave;nh sử dụng.</p>\r\n\r\n<p>- Hỗ trợ dạy học tr&ecirc;n nhiều thiết bị: tablet, smartphone, laptop..</p>', 223),
+(13, 'SÀN THƯƠNG MẠI ĐIỆN TỬ GIÁO DỤC', '<p>- Cho ph&eacute;p người d&ugrave;ng th&ecirc;m, sửa, x&oacute;a c&aacute;c chương tr&igrave;nh khuyến m&atilde;i, Phiếu giảm gi&aacute;;</p>\r\n\r\n<p>- Thanh to&aacute;n c&aacute;c nội dung cần trả ph&iacute;.</p>', 223),
+(30, 'ĐẶT KHÁM', '<ul>\r\n	<li>Người d&acirc;n đặt kh&aacute;m trực tiếp với b&aacute;c sỹ hoặc đặt lịch kh&aacute;m với cơ sở y tế</li>\r\n	<li>Xếp lịch kh&aacute;m, gửi th&ocirc;ng b&aacute;o, nhắc lịch, m&atilde; v&agrave; số thứ tự kh&aacute;m qua SMS</li>\r\n	<li>Tạo lịch tr&igrave;nh l&agrave;m việc cho b&aacute;c sỹ</li>\r\n	<li>Quản l&yacute; th&ocirc;ng tin bệnh nh&acirc;n kh&aacute;m tại CSYT. Điều phối lịch hẹn kh&aacute;m, quản l&yacute; thống k&ecirc; số lượng v&agrave; tỷ lệ đặt kh&aacute;m</li>\r\n</ul>', 224),
+(31, 'TƯ VẤN Y TẾ TỪ XA', '<ul>\r\n	<li>B&aacute;c sỹ tư vấn y tế từ xa cho bệnh nh&acirc;n theo lịch đ&atilde; đặt kh&aacute;m qua h&igrave;nh thức videocall/call/chat</li>\r\n	<li>Ghi lại ph&aacute;c đồ điều trị, k&ecirc; đơn thuốc cho bệnh nh&acirc;n....</li>\r\n	<li>Li&ecirc;n kết với c&aacute;c nh&agrave; thuốc/hiệu thuốc gần nhất</li>\r\n</ul>', 224),
+(32, 'HỘI CHẨN TƯ VẤN KHÁM, CHỮA BỆNH TỪ XA', '<p>Hội chẩn bệnh &aacute;n bệnh nh&acirc;n từ bệnh viện tuyến tr&ecirc;n v&agrave; bệnh viện tuyến dưới tới Trung t&acirc;m y tế, Bệnh viện, Ph&ograve;ng kh&aacute;m tuyến huyện, x&atilde;...</p>\r\n\r\n<ul>\r\n	<li>Hội chẩn tư vấn chẩn đo&aacute;n h&igrave;nh ảnh từ xa</li>\r\n	<li>Hội chẩn x&eacute;t nghiệm, giải phẫu bệnh từ xa</li>\r\n	<li>Hội chẩn phẫu thuật từ xa</li>\r\n</ul>', 224),
+(33, 'ĐẶT LỊCH HỘI CHẨN', '<ul>\r\n	<li>BV tuyến tr&ecirc;n tạo lịch hội chẩn với tuyến dưới v&agrave; ph&ecirc; duyệt c&aacute;c cơ sở y tế tham gia hội chẩn</li>\r\n	<li>BV tuyến dưới đăng k&yacute; tham gia hội chẩn với lịch đ&atilde; được BV tuyến tr&ecirc;n tạo</li>\r\n	<li>Gửi bệnh &aacute;n hội chẩn</li>\r\n	<li>B&aacute;o c&aacute;o, thống k&ecirc; hội chẩn</li>\r\n</ul>', 224),
+(34, 'BỆNH ÁN ĐIỆN TỬ', 'Quản lý hồ sơ bệnh án theo quy định của BYT', 224),
+(35, 'KẾT NỐI BÁC SỸ VỚI BÁC SỸ', '<p>&nbsp;&nbsp;</p>', 224),
+(36, 'NHÓM TÍNH NĂNG TỔNG QUÁT - CHĂM SÓC SK', '<ul>\r\n	<li>Chức năng tổng qu&aacute;t:&nbsp;Cung cấp c&aacute;c lược đồ, biểu đồ th&ocirc;ng tin v&agrave; số liệu về t&igrave;nh h&igrave;nh quản l&yacute; sức khỏe của người d&acirc;n tỉnh (Số d&acirc;n, hộ gia đ&igrave;nh, tổng số lượt kh&aacute;m chữa bệnh, m&ocirc; h&igrave;nh bệnh tật, t&igrave;nh h&igrave;nh li&ecirc;n th&ocirc;ng dữ liệu&nbsp;</li>\r\n	<li>Cung cấp dịch vụ chăm s&oacute;c: Quản l&yacute; HSSK, th&ocirc;ng tin chi tiết HSSK của một người d&acirc;n tr&ecirc;n địa b&agrave;n.</li>\r\n	<li>Hỗ trợ c&aacute;c dịch vụ kh&aacute;c: B&aacute;c sỹ quản l&yacute; hộ gia đ&igrave;nh, Sổ Sức khỏe điện tử,&nbsp;Trung t&acirc;m điều phối kh&aacute;m v&agrave; tư vấn KCB, Cổng th&ocirc;ng tin sức khỏe người d&acirc;n (Web),&nbsp;Dịch vụ kết nối dữ liệu sức khỏe cho c&aacute;c hệ thống tại địa b&agrave;n.</li>\r\n</ul>', 225),
+(37, 'NHÓM TÍNH NĂNG TƯƠNG TÁC', '<ul>\r\n	<li>Li&ecirc;n th&ocirc;ng&nbsp;dữ liệu hồ sơ sức khỏe với c&aacute;c hệ thống Y tế triển khai tại địa b&agrave;n.</li>\r\n	<li>Cung cấp&nbsp;ứng dụng người d&acirc;n: người d&acirc;n c&oacute; thể theo d&otilde;i v&agrave; quản l&yacute; Sổ sức khỏe điện tử của bản th&acirc;n v&agrave; người th&acirc;n tr&ecirc;n nền tảng di động (Android, IOS) v&agrave; Web.</li>\r\n	<li>Chia sẻ, khai th&aacute;c dữ liệu Hồ sơ sức khỏe.</li>\r\n</ul>', 225),
+(38, 'NHÓM TÍNH NĂNG QUẢN TRỊ', '<ul>\r\n	<li>Quản l&yacute; h&agrave;nh ch&iacute;nh:&nbsp;Hỗ trợ sức khỏe d&acirc;n số:&nbsp;Quản l&yacute; nh&acirc;n khẩu, Quản l&yacute; hộ khẩu người d&acirc;n trong địa b&agrave;n tỉnh v&agrave; được ph&acirc;n quyền/ph&acirc;n cấp theo địa giới h&agrave;nh ch&iacute;nh;&nbsp;B&aacute;o c&aacute;o &ndash; thống k&ecirc;.</li>\r\n	<li>Quản trị: Quản trị danh mục, quản trị hệ thống.</li>\r\n</ul>', 225),
+(45, 'VỚI DU KHÁCH', '<ul>\r\n	<li>Đưa th&ocirc;ng tin về c&aacute;c Tour du lịch</li>\r\n	<li>Đưa th&ocirc;ng tin về nh&agrave; h&agrave;ng, m&oacute;n ăn</li>\r\n	<li>Đưa th&ocirc;ng tin về kh&aacute;ch sạn, nh&agrave; nghỉ</li>\r\n</ul>', 227),
+(46, 'VỚI DOANH NGHIỆP CUNG CẤP DỊCH VỤ (CÔNG TY DU LỊCH, NHÀ HÀNG, KHÁCH SẠN, NHÀ NGHỈ)', '<ul>\r\n	<li>Tra cứu th&ocirc;ng tin</li>\r\n	<li>Đặt Tour/kh&aacute;ch sạn/nh&agrave; h&agrave;ng</li>\r\n	<li>T&iacute;nh to&aacute;n chi ph&iacute;,...</li>\r\n	<li>Tra cứu th&ocirc;ng tin Lễ hội</li>\r\n	<li>Tạo lịch tr&igrave;nh</li>\r\n</ul>', 227),
+(47, 'VỚI CƠ QUAN NHÀ NƯỚC (UBND TỈNH, SỞ VHTTDL)', '<ul>\r\n	<li>Quản trị hệ thống</li>\r\n	<li>T&igrave;m kiếm</li>\r\n	<li>B&aacute;o c&aacute;o thống k&ecirc;</li>\r\n	<li>Kiểm duyệt, ph&ecirc; duyệt nội dung</li>\r\n	<li>Quản l&yacute; th&ocirc;ng tin Lễ Hội</li>\r\n	<li>Quảng b&aacute; th&ocirc;ng tin</li>\r\n	<li>Quản trị cấu h&igrave;nh Cổng Th&ocirc;ng tin</li>\r\n</ul>', 227);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tinhtrang`
+--
+
+DROP TABLE IF EXISTS `tinhtrang`;
+CREATE TABLE IF NOT EXISTS `tinhtrang` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tinhtrang` varchar(255) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `video`
+--
+
+DROP TABLE IF EXISTS `video`;
+CREATE TABLE IF NOT EXISTS `video` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tenvideo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mota` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ngaydang` datetime NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `video`
+--
+
+INSERT INTO `video` (`id`, `tenvideo`, `link`, `mota`, `slug`, `ngaydang`, `status`) VALUES
+(1, 'Viettel Office - Hệ thống văn phòng điện tử', 'mx4Hh5BxcPw', '<p style=\"text-align:justify\">Viettel Office l&agrave; hệ thống Văn ph&ograve;ng điện tử th&ocirc;ng minh d&agrave;nh ri&ecirc;ng cho Doanh nghiệp sử dụng tr&ecirc;n đa nền tảng với mục ti&ecirc;u: Một văn ph&ograve;ng số kh&ocirc;ng giấy tờ để l&atilde;nh đạo tho&aacute;t ly văn ph&ograve;ng, điều h&agrave;nh duyệt văn bản mọi l&uacute;c, mọi nơi. L&agrave; tập đo&agrave;n đi đầu về chuyển đổi số, Viettel c&oacute; nhiều kinh nghiệm triển khai hệ thống Văn ph&ograve;ng điện tử cho c&aacute;c Tập đo&agrave;n, ng&acirc;n h&agrave;ng, doanh nghiệp lớn trong v&agrave; ngo&agrave;i nước. C&oacute; nhiều kinh nghiệm xử l&yacute; những vướng mắc doanh nghiệp gặp phải khi triển khai hệ thống.</p>', 'viettel-office-he-thong-van-phong-dien-tu', '2022-03-08 09:38:10', 1),
+(2, 'Dịch vụ Viettel Cloud toàn trình cho khách hàng', 'k9RPaCjcBJQ', '<p style=\"text-align:justify\">Với vai tr&ograve; l&agrave; đơn vị ti&ecirc;n phong kiến tạo x&atilde; hội số, Viettel đẩy mạnh ph&aacute;t triển d&ograve;ng dịch vụ Cloud tại Việt Nam, tiến tới cung cấp mở rộng sang c&aacute;c thị trường Đ&ocirc;ng Nam &Aacute;, Ch&acirc;u &Aacute; v&agrave; tr&ecirc;n to&agrave;n thế giới. Viettel mang đến d&ograve;ng sản phẩm dịch vụ Cloud to&agrave;n tr&igrave;nh cho kh&aacute;ch h&agrave;ng, từ tư vấn, triển khai v&agrave; vận h&agrave;nh quản l&yacute;, đến cung cấp hạ tầng chất lượng cao, ph&ugrave; hợp với mọi y&ecirc;u cầu v&agrave; quy m&ocirc; doanh nghiệp.</p>', 'dich-vu-viettel-cloud-toan-trinh-cho-khach-hang', '2022-03-08 10:12:50', 1),
+(3, 'Viettel RPA - Giải pháp tự động hóa', 'nDawnJdw5lI', '<p style=\"text-align:justify\">Robotic Process Automation (RPA) ch&iacute;nh l&agrave; Giải ph&aacute;p tự động h&oacute;a gi&uacute;p doanh nghiệp bạn bắt đầu h&agrave;nh tr&igrave;nh số h&oacute;a th&agrave;nh c&ocirc;ng. &nbsp;RPA l&agrave; c&ocirc;ng nghệ sử dụng robot phần mềm gi&uacute;p con người thực hiện c&aacute;c c&ocirc;ng việc lặp đi lặp lại, ti&ecirc;u tốn nhiều thời gian bằng c&aacute;ch m&ocirc; phỏng lại tương t&aacute;c của con người với m&aacute;y t&iacute;nh. &nbsp;Nếu doanh nghiệp bạn đ&atilde; sẵn s&agrave;ng bước đi tr&ecirc;n con đường tự động h&oacute;a nhưng chưa biết bắt đầu như thế n&agrave;o, h&atilde;y đồng h&agrave;nh c&ugrave;ng giải ph&aacute;p RPA của Viettel &ndash; h&agrave;nh trang vững chắc cho tương lai số của doanh nghiệp bạn.</p>', 'viettel-rpa-giai-phap-tu-dong-hoa', '2022-03-20 16:04:22', 1),
+(4, 'Giới thiệu Viettel Data Analytics', 'ik-y44xecWQ', '<p style=\"text-align:justify\">Data Analytics đang thực sự thay đổi thế giới v&agrave; trở th&agrave;nh một trong những yếu tố chủ chốt của hoạt động kinh doanh. Tuy nhi&ecirc;n để c&oacute; thể quản trị v&agrave; khai th&aacute;c được dữ liệu hiệu quả, doanh nghiệp cần đầu tư rất nhiều nh&acirc;n lực, vật lực v&agrave; thời gian mới. Viettel sẽ đồng h&agrave;nh c&ugrave;ng với doanh nghiệp, tiết giảm chi ph&iacute;, r&uacute;t ngắn thời gian, mang đến c&aacute;c cơ hội kinh doanh mới từ dữ liệu cho doanh nghiệp.</p>', 'gioi-thieu-viettel-data-analytics', '2022-03-08 10:12:22', 1),
+(5, 'Hệ thống quản lý phân phối trực tuyến Viettel DMS', '7ekJaVBNq-8', '<p style=\"text-align:justify\">Hệ thống quản l&yacute; ph&acirc;n phối trực tuyến Viettel DMS l&agrave; giải ph&aacute;p quản l&yacute; nguồn lực b&aacute;n h&agrave;ng, hỗ trợ qu&aacute; tr&igrave;nh điều h&agrave;nh, kinh doanh của doanh nghiệp, dựa v&agrave;o c&aacute;c số liệu tổng hợp thực tế từ thị trường do nh&acirc;n vi&ecirc;n b&aacute;n h&agrave;ng thu thập.</p>', 'he-thong-quan-ly-phan-phoi-truc-tuyen-viettel-dms', '2022-03-08 10:09:46', 1),
+(6, 'Giới thiệu Viettel MyCC (Giải pháp Tổng đài đa kênh hợp nhất)', 'uVQ3OBVAH34', '<p style=\"text-align:justify\">MyCC l&agrave; giải ph&aacute;p tổng đ&agrave;i đa k&ecirc;nh hợp nhất, kết hợp ph&acirc;n t&iacute;ch dự b&aacute;o để n&acirc;ng cao hiệu suất v&agrave; giảm chi ph&iacute; hoạt động cho doanh nghiệp. Hỗ trợ Doanh nghiệp x&acirc;y dựng, quản l&yacute;, vận h&agrave;nh bộ m&aacute;y chăm s&oacute;c kh&aacute;ch h&agrave;ng tập trung. Đảm bảo quản l&yacute; con người, quy tr&igrave;nh nghiệp vụ, chất lượng chuy&ecirc;n m&ocirc;n, hệ thống tri thức để từ đ&oacute; đ&aacute;nh gi&aacute; được hiệu quả hoạt động của bộ m&aacute;y Chăm s&oacute;c kh&aacute;ch h&agrave;ng</p>', 'gioi-thieu-viettel-mycc-giai-phap-tong-dai-da-kenh-hop-nhat', '2022-03-08 10:11:34', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visitor`
+--
+
+DROP TABLE IF EXISTS `visitor`;
+CREATE TABLE IF NOT EXISTS `visitor` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ip_address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date_visitor` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `visitor`
+--
+
+INSERT INTO `visitor` (`id`, `ip_address`, `date_visitor`) VALUES
+(1, '127.0.0.1', '2022-03-18 16:18:05'),
+(2, '127.0.0.8', '2022-03-18 16:45:26'),
+(3, '127.0.0.1', '2022-03-18 19:31:34'),
+(4, '127.0.0.1', '2022-03-18 19:32:04'),
+(5, '127.0.0.1', '2022-03-18 19:32:16');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `binhluan`
+--
+ALTER TABLE `binhluan`
+  ADD CONSTRAINT `binhluan_ibfk_1` FOREIGN KEY (`baiviet_id`) REFERENCES `baiviet` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `chitieu`
+--
+ALTER TABLE `chitieu`
+  ADD CONSTRAINT `chitieu_ibfk_1` FOREIGN KEY (`thang_id`) REFERENCES `thang` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `chuongtrinh`
+--
+ALTER TABLE `chuongtrinh`
+  ADD CONSTRAINT `chuongtrinh_ibfk_1` FOREIGN KEY (`thang_id`) REFERENCES `thang` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `dacdiem`
+--
+ALTER TABLE `dacdiem`
+  ADD CONSTRAINT `dacdiem_ibfk_1` FOREIGN KEY (`sanpham_id`) REFERENCES `sanpham` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `loiich`
+--
+ALTER TABLE `loiich`
+  ADD CONSTRAINT `loiich_ibfk_1` FOREIGN KEY (`sanpham_id`) REFERENCES `sanpham` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `nhanvien`
+--
+ALTER TABLE `nhanvien`
+  ADD CONSTRAINT `nhanvien_ibfk_1` FOREIGN KEY (`chucvu_id`) REFERENCES `chucvu` (`id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `nop_cv`
+--
+ALTER TABLE `nop_cv`
+  ADD CONSTRAINT `nop_cv_ibfk_1` FOREIGN KEY (`congviec_id`) REFERENCES `giaoviec` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `sanpham`
+--
+ALTER TABLE `sanpham`
+  ADD CONSTRAINT `sanpham_ibfk_3` FOREIGN KEY (`danhmuc_id`) REFERENCES `danhmuc` (`id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `thongtin`
+--
+ALTER TABLE `thongtin`
+  ADD CONSTRAINT `thongtin_ibfk_1` FOREIGN KEY (`sanpham_id`) REFERENCES `sanpham` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `thuchien_chitieu`
+--
+ALTER TABLE `thuchien_chitieu`
+  ADD CONSTRAINT `thuchien_chitieu_ibfk_1` FOREIGN KEY (`chitieu_id`) REFERENCES `chitieu` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tinhnang`
+--
+ALTER TABLE `tinhnang`
+  ADD CONSTRAINT `tinhnang_ibfk_1` FOREIGN KEY (`sanpham_id`) REFERENCES `sanpham` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
